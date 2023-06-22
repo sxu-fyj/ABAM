@@ -1,0 +1,5368 @@
+ssh://fuyj@115.24.15.20:22/home/fuyj/workspace/venv/utils/bin/python -u /home/fuyj/.pycharm_helpers/pydev/pydevd.py --multiproc --qt-support=auto --client 0.0.0.0 --port 40549 --file /home/fuyj/workspace/experiment/ABAM-main/src/run_2023_AURC_LSTM_CRF_our.py
+pydev debugger: process 31228 is connecting
+
+Connected to pydev debugger (build 193.7288.30)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code/Boundary-Enhanced-NER-main/model/sentclassifier.py (will have no effect)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code-paper4/W2NER-main/main.py (will have no effect)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code/piqn-main/piqn/trainer.py (will have no effect)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code-paper4/SynLSTM-for-NER-master/model/lstmcrf.py (will have no effect)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code/Boundary-Enhanced-NER-main/model/seqlabel.py (will have no effect)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code/Boundary-Enhanced-NER-main/model/wordrep.py (will have no effect)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code-paper4/SynLSTM-for-NER-master/model/deplabel_gcn.py (will have no effect)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code/Boundary-Enhanced-NER-main/model/wordsequence.py (will have no effect)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code/Boundary-Enhanced-NER-main/utils/data.py (will have no effect)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code/Boundary-Enhanced-NER-main/model/wordsequence.py (will have no effect)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code/Boundary-Enhanced-NER-main/model/seqlabel.py (will have no effect)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code/piqn-main/piqn/piqn_trainer.py (will have no effect)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code/Boundary-Enhanced-NER-main/model/wordsequence.py (will have no effect)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code-paper4/Bert-TextClassification-master/train_robert2.py (will have no effect)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code/Boundary-Enhanced-NER-main/main.py (will have no effect)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code-paper4/SynLSTM-for-NER-master/model/lstmcrf.py (will have no effect)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code/piqn-main/piqn/input_reader.py (will have no effect)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code/Boundary-Enhanced-NER-main/model/seqlabel.py (will have no effect)
+pydev debugger: warning: trying to add breakpoint to file that does not exist: /home/fuyj/workspace/experiment/some-code-paper4/Bert-TextClassification-master/train_robert.py (will have no effect)
+1
+device cuda:0
+../models_final_gatlstm_our/aurc_in_token.pt
+../models_final_gatlstm_our/aurc_in_config.json
+../models_final_gatlstm_our/aurc_in_predictions_dev.json
+../models_final_gatlstm_our/aurc_in_predictions_test.json
+../AURC/../AURC/data_dict_bert.json
+数据集大小
+8000
+8 ['abortion', 'cloning', 'death penalty', 'gun control', 'marijuana legalization', 'minimum wage', 'nuclear energy', 'school uniforms']
+{'abortion': 1000, 'minimum wage': 1000, 'gun control': 1000, 'school uniforms': 1000, 'marijuana legalization': 1000, 'death penalty': 1000, 'cloning': 1000, 'nuclear energy': 1000}
+Truncation was not explicitely activated but `max_length` is provided a specific value, please use `truncation=True` to explicitely truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+/home/fuyj/workspace/venv/utils/lib/python3.6/site-packages/transformers/tokenization_utils_base.py:1944: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  FutureWarning,
+0
+/home/fuyj/workspace/experiment/ABAM-main/src/run_2023_AURC_LSTM_CRF_our.py:490: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at  ../torch/csrc/utils/tensor_new.cpp:201.)
+  all_pieces2word = torch.tensor([f.pieces2word for f in train_features], dtype=torch.long)
+4200 132
+600 19
+1200 38
+[Info] Building character-level LSTM
+26200
+##### DOMAIN: in-domain , use CRF: True , learning-rate: 1e-05 , DROPOUT: 0.1
+
+Epoch:    0 2023-02-07 09:45:22.555950
+/home/fuyj/workspace/venv/utils/lib/python3.6/site-packages/torchcrf/__init__.py:249: UserWarning: where received a uint8 condition tensor. This behavior is deprecated and will be removed in a future version of PyTorch. Use a boolean condition instead. (Triggered internally at  ../aten/src/ATen/native/TensorCompare.cpp:328.)
+  score = torch.where(mask[i].unsqueeze(1), next_score, score)
+[[61764  4326  4153]
+ [ 7284 10569  3384]
+ [ 8334  4256  9407]]
+0.6144277604763658
+              precision    recall  f1-score   support
+
+           c     0.0286    0.0986    0.0443      1237
+           p     0.0303    0.0850    0.0446      1271
+
+   micro avg     0.0293    0.0917    0.0444      2508
+   macro avg     0.0294    0.0918    0.0445      2508
+weighted avg     0.0294    0.0917    0.0445      2508
+
+TRAIN:  micro_F1. 0.0444 |  macro_F1 0.0445
+[[9124  614  664]
+ [1097 1451  420]
+ [1251  531 1245]]
+0.6068996061246303
+              precision    recall  f1-score   support
+
+           c     0.0306    0.1065    0.0476       169
+           p     0.0269    0.0747    0.0395       174
+
+   micro avg     0.0289    0.0904    0.0438       343
+   macro avg     0.0287    0.0906    0.0435       343
+weighted avg     0.0287    0.0904    0.0435       343
+
+EVAL:   micro_F1. 0.0438 |  macro_F1 0.0435 | BEST F1: 0.0000 None
+[[17518  1305  1402]
+ [ 2625  2674   760]
+ [ 2512  1149  2701]]
+0.5921243322308513
+              precision    recall  f1-score   support
+
+           c     0.0275    0.0989    0.0430       354
+           p     0.0283    0.0883    0.0429       351
+
+   micro avg     0.0278    0.0936    0.0429       705
+   macro avg     0.0279    0.0936    0.0429       705
+weighted avg     0.0279    0.0936    0.0429       705
+
+TEST:   micro_F1. 0.0429 |  macro_F1 0.0429
+
+Epoch:    1 2023-02-07 09:48:53.654638
+[[59432  5958  4853]
+ [ 2973 15824  2440]
+ [ 4039  4743 13215]]
+0.718011740668981
+              precision    recall  f1-score   support
+
+           c     0.1209    0.3112    0.1742      1237
+           p     0.1381    0.2628    0.1810      1271
+
+   micro avg     0.1283    0.2867    0.1773      2508
+   macro avg     0.1295    0.2870    0.1776      2508
+weighted avg     0.1296    0.2867    0.1776      2508
+
+TRAIN:  micro_F1. 0.1773 |  macro_F1 0.1776
+[[8467  969  966]
+ [ 526 2052  390]
+ [ 706  592 1729]]
+0.6772771111293675
+              precision    recall  f1-score   support
+
+           c     0.0943    0.2544    0.1376       169
+           p     0.1220    0.2356    0.1608       174
+
+   micro avg     0.1061    0.2449    0.1480       343
+   macro avg     0.1082    0.2450    0.1492       343
+weighted avg     0.1084    0.2449    0.1494       343
+
+EVAL:   micro_F1. 0.1480 |  macro_F1 0.1492 | BEST F1: 0.0438 0
+[[16210  2107  1908]
+ [ 1556  3928   575]
+ [ 1528  1446  3388]]
+0.6514944110604586
+              precision    recall  f1-score   support
+
+           c     0.0956    0.2599    0.1398       354
+           p     0.1016    0.2023    0.1352       351
+
+   micro avg     0.0981    0.2312    0.1378       705
+   macro avg     0.0986    0.2311    0.1375       705
+weighted avg     0.0986    0.2312    0.1375       705
+
+TEST:   micro_F1. 0.1378 |  macro_F1 0.1375
+
+Epoch:    2 2023-02-07 09:52:22.225090
+[[64157  3182  2904]
+ [ 2706 17139  1392]
+ [ 3873  3659 14465]]
+0.7926803141539812
+              precision    recall  f1-score   support
+
+           c     0.2307    0.4107    0.2954      1237
+           p     0.2421    0.3249    0.2775      1271
+
+   micro avg     0.2357    0.3672    0.2871      2508
+   macro avg     0.2364    0.3678    0.2864      2508
+weighted avg     0.2365    0.3672    0.2863      2508
+
+TRAIN:  micro_F1. 0.2871 |  macro_F1 0.2864
+[[8994  737  671]
+ [ 750 1948  270]
+ [ 808  539 1680]]
+0.6941838877231218
+              precision    recall  f1-score   support
+
+           c     0.1646    0.3195    0.2173       169
+           p     0.2284    0.3046    0.2611       174
+
+   micro avg     0.1911    0.3120    0.2370       343
+   macro avg     0.1965    0.3121    0.2392       343
+weighted avg     0.1970    0.3120    0.2395       343
+
+EVAL:   micro_F1. 0.2370 |  macro_F1 0.2392 | BEST F1: 0.1480 1
+[[17124  1667  1434]
+ [ 1986  3643   430]
+ [ 1762  1219  3381]]
+0.6649100629617121
+              precision    recall  f1-score   support
+
+           c     0.1465    0.2910    0.1949       354
+           p     0.1693    0.2422    0.1993       351
+
+   micro avg     0.1560    0.2667    0.1969       705
+   macro avg     0.1579    0.2666    0.1971       705
+weighted avg     0.1579    0.2667    0.1971       705
+
+TEST:   micro_F1. 0.1969 |  macro_F1 0.1971
+
+Epoch:    3 2023-02-07 09:55:49.381667
+[[65795  1461  2987]
+ [ 1719 16728  2790]
+ [ 2409   938 18650]]
+0.8570455093106474
+              precision    recall  f1-score   support
+
+           c     0.3443    0.4301    0.3825      1237
+           p     0.2868    0.4540    0.3515      1271
+
+   micro avg     0.3118    0.4422    0.3657      2508
+   macro avg     0.3156    0.4420    0.3670      2508
+weighted avg     0.3152    0.4422    0.3668      2508
+
+TRAIN:  micro_F1. 0.3657 |  macro_F1 0.3670
+[[8897  518  987]
+ [ 741 1556  671]
+ [ 734  299 1994]]
+0.6787697516267167
+              precision    recall  f1-score   support
+
+           c     0.1318    0.2012    0.1593       169
+           p     0.1943    0.3908    0.2595       174
+
+   micro avg     0.1678    0.2974    0.2145       343
+   macro avg     0.1630    0.2960    0.2094       343
+weighted avg     0.1635    0.2974    0.2101       343
+
+EVAL:   micro_F1. 0.2145 |  macro_F1 0.2094 | BEST F1: 0.2370 2
+
+Epoch:    4 2023-02-07 09:59:03.477416
+[[66170  1589  2484]
+ [ 1061 18686  1490]
+ [ 1638   798 19561]]
+0.897943230515203
+              precision    recall  f1-score   support
+
+           c     0.4254    0.5344    0.4737      1237
+           p     0.3841    0.5256    0.4439      1271
+
+   micro avg     0.4036    0.5299    0.4582      2508
+   macro avg     0.4047    0.5300    0.4588      2508
+weighted avg     0.4045    0.5299    0.4586      2508
+
+TRAIN:  micro_F1. 0.4582 |  macro_F1 0.4588
+[[8623  687 1092]
+ [ 684 1787  497]
+ [ 712  408 1907]]
+0.6800544191263446
+              precision    recall  f1-score   support
+
+           c     0.1779    0.3136    0.2270       169
+           p     0.2065    0.3678    0.2645       174
+
+   micro avg     0.1924    0.3411    0.2461       343
+   macro avg     0.1922    0.3407    0.2457       343
+weighted avg     0.1924    0.3411    0.2460       343
+
+EVAL:   micro_F1. 0.2461 |  macro_F1 0.2457 | BEST F1: 0.2370 2
+[[16614  1484  2127]
+ [ 1708  3283  1068]
+ [ 1659   737  3966]]
+0.6602819222190759
+              precision    recall  f1-score   support
+
+           c     0.1767    0.2910    0.2199       354
+           p     0.1693    0.3048    0.2177       351
+
+   micro avg     0.1728    0.2979    0.2188       705
+   macro avg     0.1730    0.2979    0.2188       705
+weighted avg     0.1730    0.2979    0.2188       705
+
+TEST:   micro_F1. 0.2188 |  macro_F1 0.2188
+
+Epoch:    5 2023-02-07 10:02:30.731279
+[[67182  1305  1756]
+ [  922 19587   728]
+ [ 1252   567 20178]]
+0.9278857364578382
+              precision    recall  f1-score   support
+
+           c     0.5055    0.5982    0.5479      1237
+           p     0.4631    0.5633    0.5083      1271
+
+   micro avg     0.4837    0.5805    0.5277      2508
+   macro avg     0.4843    0.5808    0.5281      2508
+weighted avg     0.4840    0.5805    0.5279      2508
+
+TRAIN:  micro_F1. 0.5277 |  macro_F1 0.5281
+[[8588  721 1093]
+ [ 761 1820  387]
+ [ 666  520 1841]]
+0.6750111626684099
+              precision    recall  f1-score   support
+
+           c     0.1896    0.3018    0.2329       169
+           p     0.2384    0.3851    0.2945       174
+
+   micro avg     0.2145    0.3440    0.2643       343
+   macro avg     0.2140    0.3434    0.2637       343
+weighted avg     0.2144    0.3440    0.2641       343
+
+EVAL:   micro_F1. 0.2643 |  macro_F1 0.2637 | BEST F1: 0.2461 4
+[[16677  1436  2112]
+ [ 1773  3382   904]
+ [ 1649   865  3848]]
+0.6616953439336916
+              precision    recall  f1-score   support
+
+           c     0.1809    0.3051    0.2271       354
+           p     0.1727    0.3105    0.2220       351
+
+   micro avg     0.1767    0.3078    0.2245       705
+   macro avg     0.1768    0.3078    0.2246       705
+weighted avg     0.1768    0.3078    0.2246       705
+
+TEST:   micro_F1. 0.2245 |  macro_F1 0.2246
+
+Epoch:    6 2023-02-07 10:05:57.862875
+[[67753  1058  1432]
+ [  839 19923   475]
+ [ 1167   239 20591]]
+0.9439769512246815
+              precision    recall  f1-score   support
+
+           c     0.5701    0.6217    0.5947      1237
+           p     0.5372    0.5964    0.5652      1271
+
+   micro avg     0.5533    0.6089    0.5797      2508
+   macro avg     0.5536    0.6090    0.5800      2508
+weighted avg     0.5534    0.6089    0.5798      2508
+
+TRAIN:  micro_F1. 0.5797 |  macro_F1 0.5800
+[[8880  704  818]
+ [ 831 1756  381]
+ [ 833  500 1694]]
+0.670878176150003
+              precision    recall  f1-score   support
+
+           c     0.1901    0.2959    0.2315       169
+           p     0.2458    0.3391    0.2850       174
+
+   micro avg     0.2167    0.3178    0.2577       343
+   macro avg     0.2180    0.3175    0.2583       343
+weighted avg     0.2184    0.3178    0.2586       343
+
+EVAL:   micro_F1. 0.2577 |  macro_F1 0.2583 | BEST F1: 0.2643 5
+
+Epoch:    7 2023-02-07 10:09:07.290085
+[[67216  1224  1803]
+ [  477 20373   387]
+ [  582   202 21213]]
+0.9505947185667507
+              precision    recall  f1-score   support
+
+           c     0.6079    0.6718    0.6382      1237
+           p     0.5666    0.6664    0.6124      1271
+
+   micro avg     0.5863    0.6691    0.6250      2508
+   macro avg     0.5872    0.6691    0.6253      2508
+weighted avg     0.5869    0.6691    0.6252      2508
+
+TRAIN:  micro_F1. 0.6250 |  macro_F1 0.6253
+[[8394  794 1214]
+ [ 631 1756  581]
+ [ 686  426 1915]]
+0.6646780832637197
+              precision    recall  f1-score   support
+
+           c     0.1917    0.3018    0.2345       169
+           p     0.2468    0.4368    0.3154       174
+
+   micro avg     0.2213    0.3703    0.2770       343
+   macro avg     0.2192    0.3693    0.2749       343
+weighted avg     0.2196    0.3703    0.2755       343
+
+EVAL:   micro_F1. 0.2770 |  macro_F1 0.2749 | BEST F1: 0.2643 5
+[[16260  1601  2364]
+ [ 1598  3248  1213]
+ [ 1519   689  4154]]
+0.6569426789821464
+              precision    recall  f1-score   support
+
+           c     0.1903    0.2881    0.2292       354
+           p     0.1952    0.3476    0.2500       351
+
+   micro avg     0.1929    0.3177    0.2401       705
+   macro avg     0.1927    0.3179    0.2396       705
+weighted avg     0.1927    0.3177    0.2396       705
+
+TEST:   micro_F1. 0.2401 |  macro_F1 0.2396
+
+Epoch:    8 2023-02-07 10:12:34.353103
+[[67496  1224  1523]
+ [  358 20601   278]
+ [  465   179 21353]]
+0.9576431382216537
+              precision    recall  f1-score   support
+
+           c     0.6455    0.6993    0.6713      1237
+           p     0.6255    0.6939    0.6580      1271
+
+   micro avg     0.6353    0.6966    0.6645      2508
+   macro avg     0.6355    0.6966    0.6646      2508
+weighted avg     0.6354    0.6966    0.6646      2508
+
+TRAIN:  micro_F1. 0.6645 |  macro_F1 0.6646
+[[8312  841 1249]
+ [ 634 1789  545]
+ [ 613  472 1942]]
+0.6655272316796182
+              precision    recall  f1-score   support
+
+           c     0.1879    0.3136    0.2350       169
+           p     0.2348    0.4425    0.3068       174
+
+   micro avg     0.2131    0.3790    0.2728       343
+   macro avg     0.2113    0.3781    0.2709       343
+weighted avg     0.2117    0.3790    0.2714       343
+
+EVAL:   micro_F1. 0.2728 |  macro_F1 0.2709 | BEST F1: 0.2770 7
+
+Epoch:    9 2023-02-07 10:15:41.095627
+[[67492  1200  1551]
+ [  202 20834   201]
+ [  357   114 21526]]
+0.9624632162043826
+              precision    recall  f1-score   support
+
+           c     0.6428    0.7259    0.6819      1237
+           p     0.6184    0.7152    0.6633      1271
+
+   micro avg     0.6303    0.7205    0.6724      2508
+   macro avg     0.6306    0.7206    0.6726      2508
+weighted avg     0.6304    0.7205    0.6724      2508
+
+TRAIN:  micro_F1. 0.6724 |  macro_F1 0.6726
+[[8099  884 1419]
+ [ 483 1907  578]
+ [ 598  428 2001]]
+0.6711072680839943
+              precision    recall  f1-score   support
+
+           c     0.2092    0.3491    0.2616       169
+           p     0.2548    0.4598    0.3279       174
+
+   micro avg     0.2332    0.4052    0.2961       343
+   macro avg     0.2320    0.4044    0.2948       343
+weighted avg     0.2323    0.4052    0.2952       343
+
+EVAL:   micro_F1. 0.2961 |  macro_F1 0.2948 | BEST F1: 0.2770 7
+[[15646  1926  2653]
+ [ 1328  3416  1315]
+ [ 1322   724  4316]]
+0.6550586615647459
+              precision    recall  f1-score   support
+
+           c     0.2174    0.3390    0.2649       354
+           p     0.1991    0.3675    0.2583       351
+
+   micro avg     0.2075    0.3532    0.2614       705
+   macro avg     0.2082    0.3533    0.2616       705
+weighted avg     0.2083    0.3532    0.2616       705
+
+TEST:   micro_F1. 0.2614 |  macro_F1 0.2616
+
+Epoch:   10 2023-02-07 10:19:11.974753
+[[68613   742   888]
+ [  337 20725   175]
+ [  479    56 21462]]
+0.9719863553036793
+              precision    recall  f1-score   support
+
+           c     0.6669    0.7381    0.7007      1237
+           p     0.6493    0.7270    0.6860      1271
+
+   micro avg     0.6580    0.7325    0.6932      2508
+   macro avg     0.6581    0.7325    0.6933      2508
+weighted avg     0.6580    0.7325    0.6932      2508
+
+TRAIN:  micro_F1. 0.6932 |  macro_F1 0.6933
+[[8600  775 1027]
+ [ 686 1792  490]
+ [ 759  406 1862]]
+0.6752648815254815
+              precision    recall  f1-score   support
+
+           c     0.1638    0.2781    0.2061       169
+           p     0.2708    0.4483    0.3377       174
+
+   micro avg     0.2174    0.3644    0.2723       343
+   macro avg     0.2173    0.3632    0.2719       343
+weighted avg     0.2181    0.3644    0.2729       343
+
+EVAL:   micro_F1. 0.2723 |  macro_F1 0.2719 | BEST F1: 0.2961 9
+
+Epoch:   11 2023-02-07 10:22:24.992965
+[[69298   538   407]
+ [  439 20759    39]
+ [  751    80 21166]]
+0.9766090066010543
+              precision    recall  f1-score   support
+
+           c     0.7060    0.7648    0.7342      1237
+           p     0.6647    0.7254    0.6938      1271
+
+   micro avg     0.6850    0.7448    0.7137      2508
+   macro avg     0.6854    0.7451    0.7140      2508
+weighted avg     0.6851    0.7448    0.7137      2508
+
+TRAIN:  micro_F1. 0.7137 |  macro_F1 0.7140
+[[9108  665  629]
+ [ 869 1767  332]
+ [ 975  493 1559]]
+0.6716162682363144
+              precision    recall  f1-score   support
+
+           c     0.1818    0.3077    0.2286       169
+           p     0.2344    0.3448    0.2791       174
+
+   micro avg     0.2066    0.3265    0.2531       343
+   macro avg     0.2081    0.3263    0.2538       343
+weighted avg     0.2085    0.3265    0.2542       343
+
+EVAL:   micro_F1. 0.2531 |  macro_F1 0.2538 | BEST F1: 0.2961 9
+
+Epoch:   12 2023-02-07 10:25:35.715528
+[[68701   776   766]
+ [  198 20969    70]
+ [  329    25 21643]]
+0.9778509843068549
+              precision    recall  f1-score   support
+
+           c     0.7119    0.7930    0.7503      1237
+           p     0.6880    0.7687    0.7261      1271
+
+   micro avg     0.6998    0.7807    0.7380      2508
+   macro avg     0.7000    0.7809    0.7382      2508
+weighted avg     0.6998    0.7807    0.7380      2508
+
+TRAIN:  micro_F1. 0.7380 |  macro_F1 0.7382
+[[8369  886 1147]
+ [ 578 1901  489]
+ [ 693  372 1962]]
+0.682660050315867
+              precision    recall  f1-score   support
+
+           c     0.1981    0.3609    0.2558       169
+           p     0.2099    0.4138    0.2785       174
+
+   micro avg     0.2043    0.3878    0.2676       343
+   macro avg     0.2040    0.3874    0.2671       343
+weighted avg     0.2041    0.3878    0.2673       343
+
+EVAL:   micro_F1. 0.2676 |  macro_F1 0.2671 | BEST F1: 0.2961 9
+
+Epoch:   13 2023-02-07 10:28:45.920586
+[[68896   684   663]
+ [  178 21012    47]
+ [  302    15 21680]]
+0.9807541979508251
+              precision    recall  f1-score   support
+
+           c     0.7196    0.8027    0.7589      1237
+           p     0.7185    0.7891    0.7522      1271
+
+   micro avg     0.7190    0.7959    0.7555      2508
+   macro avg     0.7190    0.7959    0.7555      2508
+weighted avg     0.7190    0.7959    0.7555      2508
+
+TRAIN:  micro_F1. 0.7555 |  macro_F1 0.7555
+[[8412  831 1159]
+ [ 628 1743  597]
+ [ 685  349 1993]]
+0.671964956335311
+              precision    recall  f1-score   support
+
+           c     0.1971    0.3254    0.2455       169
+           p     0.2052    0.4080    0.2731       174
+
+   micro avg     0.2016    0.3673    0.2603       343
+   macro avg     0.2012    0.3667    0.2593       343
+weighted avg     0.2012    0.3673    0.2595       343
+
+EVAL:   micro_F1. 0.2603 |  macro_F1 0.2593 | BEST F1: 0.2961 9
+
+Epoch:   14 2023-02-07 10:31:51.878772
+[[69312   517   414]
+ [  186 21037    14]
+ [  385    55 21557]]
+0.9838425704357815
+              precision    recall  f1-score   support
+
+           c     0.7550    0.8246    0.7883      1237
+           p     0.7489    0.8025    0.7748      1271
+
+   micro avg     0.7519    0.8134    0.7815      2508
+   macro avg     0.7519    0.8135    0.7815      2508
+weighted avg     0.7519    0.8134    0.7814      2508
+
+TRAIN:  micro_F1. 0.7815 |  macro_F1 0.7815
+[[8681  957  764]
+ [ 638 2076  254]
+ [ 782  690 1555]]
+0.6742316989423274
+              precision    recall  f1-score   support
+
+           c     0.1848    0.3728    0.2471       169
+           p     0.2430    0.3506    0.2871       174
+
+   micro avg     0.2095    0.3615    0.2652       343
+   macro avg     0.2139    0.3617    0.2671       343
+weighted avg     0.2143    0.3615    0.2674       343
+
+EVAL:   micro_F1. 0.2652 |  macro_F1 0.2671 | BEST F1: 0.2961 9
+
+Epoch:   15 2023-02-07 10:34:59.918505
+[[68927   653   663]
+ [  119 21093    25]
+ [  192    20 21785]]
+0.983032763791253
+              precision    recall  f1-score   support
+
+           c     0.7685    0.8294    0.7978      1237
+           p     0.7544    0.8025    0.7777      1271
+
+   micro avg     0.7614    0.8158    0.7877      2508
+   macro avg     0.7615    0.8160    0.7878      2508
+weighted avg     0.7614    0.8158    0.7876      2508
+
+TRAIN:  micro_F1. 0.7877 |  macro_F1 0.7878
+[[8028 1122 1252]
+ [ 472 2045  451]
+ [ 537  592 1898]]
+0.6688959406330522
+              precision    recall  f1-score   support
+
+           c     0.2226    0.4083    0.2881       169
+           p     0.2662    0.4253    0.3274       174
+
+   micro avg     0.2432    0.4169    0.3072       343
+   macro avg     0.2444    0.4168    0.3078       343
+weighted avg     0.2447    0.4169    0.3081       343
+
+EVAL:   micro_F1. 0.3072 |  macro_F1 0.3078 | BEST F1: 0.2961 9
+[[15493  2380  2352]
+ [ 1285  3915   859]
+ [ 1227  1215  3920]]
+0.656202651340196
+              precision    recall  f1-score   support
+
+           c     0.2081    0.3785    0.2685       354
+           p     0.2319    0.3732    0.2860       351
+
+   micro avg     0.2192    0.3759    0.2769       705
+   macro avg     0.2200    0.3759    0.2773       705
+weighted avg     0.2199    0.3759    0.2772       705
+
+TEST:   micro_F1. 0.2769 |  macro_F1 0.2773
+
+Epoch:   16 2023-02-07 10:38:26.149916
+[[69775   274   194]
+ [  342 20895     0]
+ [  474    44 21479]]
+0.9863436937635588
+              precision    recall  f1-score   support
+
+           c     0.7764    0.8391    0.8065      1237
+           p     0.7943    0.8293    0.8114      1271
+
+   micro avg     0.7853    0.8341    0.8090      2508
+   macro avg     0.7853    0.8342    0.8090      2508
+weighted avg     0.7854    0.8341    0.8090      2508
+
+TRAIN:  micro_F1. 0.8090 |  macro_F1 0.8090
+[[9000  717  685]
+ [ 852 1899  217]
+ [ 922  600 1505]]
+0.6727014141235048
+              precision    recall  f1-score   support
+
+           c     0.1855    0.3491    0.2423       169
+           p     0.2687    0.3506    0.3042       174
+
+   micro avg     0.2202    0.3499    0.2703       343
+   macro avg     0.2271    0.3498    0.2733       343
+weighted avg     0.2277    0.3499    0.2737       343
+
+EVAL:   micro_F1. 0.2703 |  macro_F1 0.2733 | BEST F1: 0.3072 15
+
+Epoch:   17 2023-02-07 10:41:31.197753
+[[69474   339   430]
+ [  112 21076    49]
+ [  211    22 21764]]
+0.9879586409356654
+              precision    recall  f1-score   support
+
+           c     0.7991    0.8618    0.8292      1237
+           p     0.7919    0.8505    0.8202      1271
+
+   micro avg     0.7955    0.8561    0.8247      2508
+   macro avg     0.7955    0.8561    0.8247      2508
+weighted avg     0.7955    0.8561    0.8247      2508
+
+TRAIN:  micro_F1. 0.8247 |  macro_F1 0.8247
+[[8286 1003 1113]
+ [ 613 1950  405]
+ [ 624  627 1776]]
+0.6630856863205268
+              precision    recall  f1-score   support
+
+           c     0.1782    0.3491    0.2360       169
+           p     0.2233    0.3851    0.2827       174
+
+   micro avg     0.1997    0.3673    0.2587       343
+   macro avg     0.2008    0.3671    0.2594       343
+weighted avg     0.2011    0.3673    0.2597       343
+
+EVAL:   micro_F1. 0.2587 |  macro_F1 0.2594 | BEST F1: 0.3072 15
+
+Epoch:   18 2023-02-07 10:44:36.734802
+[[69723   255   265]
+ [  139 21058    40]
+ [  193     7 21797]]
+0.990704377563501
+              precision    recall  f1-score   support
+
+           c     0.8363    0.8836    0.8593      1237
+           p     0.8294    0.8757    0.8519      1271
+
+   micro avg     0.8328    0.8796    0.8555      2508
+   macro avg     0.8328    0.8796    0.8556      2508
+weighted avg     0.8328    0.8796    0.8555      2508
+
+TRAIN:  micro_F1. 0.8555 |  macro_F1 0.8556
+[[8615  799  988]
+ [ 690 1834  444]
+ [ 678  443 1906]]
+0.6836708099976998
+              precision    recall  f1-score   support
+
+           c     0.1787    0.3077    0.2261       169
+           p     0.2457    0.4080    0.3067       174
+
+   micro avg     0.2121    0.3586    0.2665       343
+   macro avg     0.2122    0.3579    0.2664       343
+weighted avg     0.2127    0.3586    0.2670       343
+
+EVAL:   micro_F1. 0.2665 |  macro_F1 0.2664 | BEST F1: 0.3072 15
+
+Epoch:   19 2023-02-07 10:47:43.530922
+[[69430   421   392]
+ [   74 21105    58]
+ [  131     3 21863]]
+0.9888471260595648
+              precision    recall  f1-score   support
+
+           c     0.8308    0.9014    0.8647      1237
+           p     0.8226    0.8867    0.8535      1271
+
+   micro avg     0.8267    0.8939    0.8590      2508
+   macro avg     0.8267    0.8940    0.8591      2508
+weighted avg     0.8267    0.8939    0.8590      2508
+
+TRAIN:  micro_F1. 0.8590 |  macro_F1 0.8591
+[[7894 1047 1461]
+ [ 458 1977  533]
+ [ 520  485 2022]]
+0.667929843595461
+              precision    recall  f1-score   support
+
+           c     0.2112    0.3787    0.2712       169
+           p     0.2184    0.4368    0.2912       174
+
+   micro avg     0.2151    0.4082    0.2817       343
+   macro avg     0.2148    0.4077    0.2812       343
+weighted avg     0.2149    0.4082    0.2813       343
+
+EVAL:   micro_F1. 0.2817 |  macro_F1 0.2812 | BEST F1: 0.3072 15
+
+Epoch:   20 2023-02-07 10:50:50.080706
+[[69486   292   465]
+ [   56 21132    49]
+ [  103     5 21889]]
+0.9900069577175138
+              precision    recall  f1-score   support
+
+           c     0.8602    0.9103    0.8845      1237
+           p     0.8279    0.8969    0.8610      1271
+
+   micro avg     0.8436    0.9035    0.8725      2508
+   macro avg     0.8440    0.9036    0.8728      2508
+weighted avg     0.8438    0.9035    0.8726      2508
+
+TRAIN:  micro_F1. 0.8725 |  macro_F1 0.8728
+[[7831  896 1675]
+ [ 493 1812  663]
+ [ 497  458 2072]]
+0.6542574792899584
+              precision    recall  f1-score   support
+
+           c     0.2022    0.3314    0.2511       169
+           p     0.2145    0.4598    0.2925       174
+
+   micro avg     0.2092    0.3965    0.2739       343
+   macro avg     0.2083    0.3956    0.2718       343
+weighted avg     0.2084    0.3965    0.2721       343
+
+EVAL:   micro_F1. 0.2739 |  macro_F1 0.2718 | BEST F1: 0.3072 15
+
+Epoch:   21 2023-02-07 10:53:56.640136
+[[69833   181   229]
+ [  144 21092     1]
+ [  177     3 21817]]
+0.9925818845964395
+              precision    recall  f1-score   support
+
+           c     0.8694    0.9095    0.8890      1237
+           p     0.8777    0.9087    0.8929      1271
+
+   micro avg     0.8736    0.9091    0.8910      2508
+   macro avg     0.8735    0.9091    0.8910      2508
+weighted avg     0.8736    0.9091    0.8910      2508
+
+TRAIN:  micro_F1. 0.8910 |  macro_F1 0.8910
+[[8581  854  967]
+ [ 686 1881  401]
+ [ 652  480 1895]]
+0.6851770919155085
+              precision    recall  f1-score   support
+
+           c     0.1763    0.3254    0.2287       169
+           p     0.2466    0.4195    0.3106       174
+
+   micro avg     0.2105    0.3732    0.2692       343
+   macro avg     0.2115    0.3725    0.2697       343
+weighted avg     0.2120    0.3732    0.2703       343
+
+EVAL:   micro_F1. 0.2692 |  macro_F1 0.2697 | BEST F1: 0.3072 15
+
+Epoch:   22 2023-02-07 10:57:02.036021
+[[69685   285   273]
+ [   57 21159    21]
+ [  111     3 21883]]
+0.9923356651177233
+              precision    recall  f1-score   support
+
+           c     0.8593    0.9184    0.8878      1237
+           p     0.8408    0.9142    0.8760      1271
+
+   micro avg     0.8499    0.9163    0.8818      2508
+   macro avg     0.8501    0.9163    0.8819      2508
+weighted avg     0.8499    0.9163    0.8818      2508
+
+TRAIN:  micro_F1. 0.8818 |  macro_F1 0.8819
+[[7950  997 1455]
+ [ 509 1970  489]
+ [ 543  464 2020]]
+0.6710085787466399
+              precision    recall  f1-score   support
+
+           c     0.2207    0.3905    0.2821       169
+           p     0.2287    0.4483    0.3029       174
+
+   micro avg     0.2250    0.4198    0.2930       343
+   macro avg     0.2247    0.4194    0.2925       343
+weighted avg     0.2248    0.4198    0.2926       343
+
+EVAL:   micro_F1. 0.2930 |  macro_F1 0.2925 | BEST F1: 0.3072 15
+
+Epoch:   23 2023-02-07 11:00:07.656848
+[[69861   216   166]
+ [   83 21137    17]
+ [  179     9 21809]]
+0.993116260207219
+              precision    recall  f1-score   support
+
+           c     0.8752    0.9240    0.8989      1237
+           p     0.8739    0.9268    0.8996      1271
+
+   micro avg     0.8745    0.9254    0.8993      2508
+   macro avg     0.8745    0.9254    0.8993      2508
+weighted avg     0.8745    0.9254    0.8993      2508
+
+TRAIN:  micro_F1. 0.8993 |  macro_F1 0.8993
+[[8472  845 1085]
+ [ 546 1877  545]
+ [ 651  436 1940]]
+0.6817157055473193
+              precision    recall  f1-score   support
+
+           c     0.2080    0.3373    0.2573       169
+           p     0.2267    0.4195    0.2944       174
+
+   micro avg     0.2181    0.3790    0.2769       343
+   macro avg     0.2174    0.3784    0.2758       343
+weighted avg     0.2175    0.3790    0.2761       343
+
+EVAL:   micro_F1. 0.2769 |  macro_F1 0.2758 | BEST F1: 0.3072 15
+
+Epoch:   24 2023-02-07 11:03:12.992806
+[[69961   186    96]
+ [   84 21138    15]
+ [  166    24 21807]]
+0.9940340189597662
+              precision    recall  f1-score   support
+
+           c     0.9007    0.9240    0.9122      1237
+           p     0.8949    0.9308    0.9125      1271
+
+   micro avg     0.8977    0.9274    0.9123      2508
+   macro avg     0.8978    0.9274    0.9123      2508
+weighted avg     0.8977    0.9274    0.9123      2508
+
+TRAIN:  micro_F1. 0.9123 |  macro_F1 0.9123
+[[8729  934  739]
+ [ 623 2011  334]
+ [ 758  625 1644]]
+0.6795692595066832
+              precision    recall  f1-score   support
+
+           c     0.2230    0.3787    0.2807       169
+           p     0.2762    0.3793    0.3196       174
+
+   micro avg     0.2471    0.3790    0.2992       343
+   macro avg     0.2496    0.3790    0.3002       343
+weighted avg     0.2500    0.3790    0.3004       343
+
+EVAL:   micro_F1. 0.2992 |  macro_F1 0.3002 | BEST F1: 0.3072 15
+
+Epoch:   25 2023-02-07 11:06:19.478452
+[[70013   122   108]
+ [   79 21132    26]
+ [  111    12 21874]]
+0.9951820496272648
+              precision    recall  f1-score   support
+
+           c     0.8874    0.9305    0.9084      1237
+           p     0.9169    0.9457    0.9311      1271
+
+   micro avg     0.9022    0.9382    0.9199      2508
+   macro avg     0.9021    0.9381    0.9198      2508
+weighted avg     0.9023    0.9382    0.9199      2508
+
+TRAIN:  micro_F1. 0.9199 |  macro_F1 0.9198
+[[8401  853 1148]
+ [ 627 1914  427]
+ [ 619  535 1873]]
+0.6757019732327073
+              precision    recall  f1-score   support
+
+           c     0.1700    0.3018    0.2175       169
+           p     0.2435    0.4310    0.3112       174
+
+   micro avg     0.2072    0.3673    0.2650       343
+   macro avg     0.2068    0.3664    0.2643       343
+weighted avg     0.2073    0.3673    0.2650       343
+
+EVAL:   micro_F1. 0.2650 |  macro_F1 0.2643 | BEST F1: 0.3072 15
+
+Epoch:   26 2023-02-07 11:09:25.034472
+[[70100    84    59]
+ [  171 21059     7]
+ [  170     6 21821]]
+0.9949074282857735
+              precision    recall  f1-score   support
+
+           c     0.9237    0.9402    0.9319      1237
+           p     0.9247    0.9465    0.9355      1271
+
+   micro avg     0.9242    0.9434    0.9337      2508
+   macro avg     0.9242    0.9433    0.9337      2508
+weighted avg     0.9242    0.9434    0.9337      2508
+
+TRAIN:  micro_F1. 0.9337 |  macro_F1 0.9337
+[[8664  842  896]
+ [ 691 1907  370]
+ [ 744  495 1788]]
+0.6824203972711285
+              precision    recall  f1-score   support
+
+           c     0.2118    0.3609    0.2670       169
+           p     0.2601    0.4080    0.3177       174
+
+   micro avg     0.2353    0.3848    0.2920       343
+   macro avg     0.2359    0.3845    0.2923       343
+weighted avg     0.2363    0.3848    0.2927       343
+
+EVAL:   micro_F1. 0.2920 |  macro_F1 0.2923 | BEST F1: 0.3072 15
+
+Epoch:   27 2023-02-07 11:12:31.587341
+[[70018   121   104]
+ [   76 21133    28]
+ [   64    10 21923]]
+0.9957315766991216
+              precision    recall  f1-score   support
+
+           c     0.9176    0.9458    0.9315      1237
+           p     0.9234    0.9575    0.9401      1271
+
+   micro avg     0.9206    0.9518    0.9359      2508
+   macro avg     0.9205    0.9517    0.9358      2508
+weighted avg     0.9205    0.9518    0.9359      2508
+
+TRAIN:  micro_F1. 0.9359 |  macro_F1 0.9358
+[[8283  987 1132]
+ [ 533 2051  384]
+ [ 558  529 1940]]
+0.687955803019769
+              precision    recall  f1-score   support
+
+           c     0.2339    0.4083    0.2974       169
+           p     0.2750    0.4425    0.3392       174
+
+   micro avg     0.2539    0.4257    0.3181       343
+   macro avg     0.2544    0.4254    0.3183       343
+weighted avg     0.2547    0.4257    0.3186       343
+
+EVAL:   micro_F1. 0.3181 |  macro_F1 0.3183 | BEST F1: 0.3072 15
+[[15929  1971  2325]
+ [ 1488  3768   803]
+ [ 1272  1057  4033]]
+0.667124467558953
+              precision    recall  f1-score   support
+
+           c     0.2268    0.3729    0.2821       354
+           p     0.2230    0.3590    0.2751       351
+
+   micro avg     0.2249    0.3660    0.2786       705
+   macro avg     0.2249    0.3659    0.2786       705
+weighted avg     0.2249    0.3660    0.2786       705
+
+TEST:   micro_F1. 0.2786 |  macro_F1 0.2786
+
+Epoch:   28 2023-02-07 11:15:58.653563
+[[69922   200   121]
+ [   18 21212     7]
+ [   39     6 21952]]
+0.9959879272724717
+              precision    recall  f1-score   support
+
+           c     0.9140    0.9450    0.9293      1237
+           p     0.9333    0.9583    0.9457      1271
+
+   micro avg     0.9238    0.9518    0.9375      2508
+   macro avg     0.9237    0.9517    0.9375      2508
+weighted avg     0.9238    0.9518    0.9376      2508
+
+TRAIN:  micro_F1. 0.9375 |  macro_F1 0.9375
+[[7775 1423 1204]
+ [ 331 2327  310]
+ [ 502  802 1723]]
+0.6623337413145126
+              precision    recall  f1-score   support
+
+           c     0.2226    0.4438    0.2964       169
+           p     0.2558    0.3793    0.3056       174
+
+   micro avg     0.2370    0.4111    0.3006       343
+   macro avg     0.2392    0.4115    0.3010       343
+weighted avg     0.2394    0.4111    0.3011       343
+
+EVAL:   micro_F1. 0.3006 |  macro_F1 0.3010 | BEST F1: 0.3181 27
+
+Epoch:   29 2023-02-07 11:19:09.973873
+[[70105    81    57]
+ [   67 21170     0]
+ [   59     5 21933]]
+0.9972564142939936
+              precision    recall  f1-score   support
+
+           c     0.9345    0.9580    0.9461      1237
+           p     0.9483    0.9677    0.9579      1271
+
+   micro avg     0.9415    0.9629    0.9521      2508
+   macro avg     0.9414    0.9629    0.9520      2508
+weighted avg     0.9415    0.9629    0.9521      2508
+
+TRAIN:  micro_F1. 0.9521 |  macro_F1 0.9520
+[[8695  874  833]
+ [ 642 1983  343]
+ [ 753  583 1691]]
+0.6804471930765325
+              precision    recall  f1-score   support
+
+           c     0.2155    0.3787    0.2747       169
+           p     0.2547    0.3908    0.3084       174
+
+   micro avg     0.2340    0.3848    0.2911       343
+   macro avg     0.2351    0.3848    0.2915       343
+weighted avg     0.2354    0.3848    0.2918       343
+
+EVAL:   micro_F1. 0.2911 |  macro_F1 0.2915 | BEST F1: 0.3181 27
+
+Epoch:   30 2023-02-07 11:22:14.570078
+[[70102    74    67]
+ [   36 21195     6]
+ [   45     9 21943]]
+0.997531148768409
+              precision    recall  f1-score   support
+
+           c     0.9499    0.9660    0.9579      1237
+           p     0.9590    0.9748    0.9668      1271
+
+   micro avg     0.9545    0.9705    0.9624      2508
+   macro avg     0.9544    0.9704    0.9624      2508
+weighted avg     0.9545    0.9705    0.9624      2508
+
+TRAIN:  micro_F1. 0.9624 |  macro_F1 0.9624
+[[8450 1036  916]
+ [ 605 2021  342]
+ [ 669  622 1736]]
+0.6748173674320802
+              precision    recall  f1-score   support
+
+           c     0.2284    0.3905    0.2882       169
+           p     0.2500    0.3736    0.2995       174
+
+   micro avg     0.2386    0.3819    0.2937       343
+   macro avg     0.2392    0.3820    0.2939       343
+weighted avg     0.2393    0.3819    0.2940       343
+
+EVAL:   micro_F1. 0.2937 |  macro_F1 0.2939 | BEST F1: 0.3181 27
+
+Epoch:   31 2023-02-07 11:25:18.977110
+[[70060    68   115]
+ [   47 21179    11]
+ [   11    10 21976]]
+0.9972497126964593
+              precision    recall  f1-score   support
+
+           c     0.9567    0.9644    0.9605      1237
+           p     0.9487    0.9756    0.9620      1271
+
+   micro avg     0.9526    0.9701    0.9613      2508
+   macro avg     0.9527    0.9700    0.9613      2508
+weighted avg     0.9527    0.9701    0.9613      2508
+
+TRAIN:  micro_F1. 0.9613 |  macro_F1 0.9613
+[[8012 1008 1382]
+ [ 498 1943  527]
+ [ 510  453 2064]]
+0.6748712229490939
+              precision    recall  f1-score   support
+
+           c     0.2431    0.3669    0.2925       169
+           p     0.2420    0.4368    0.3115       174
+
+   micro avg     0.2425    0.4023    0.3026       343
+   macro avg     0.2426    0.4018    0.3020       343
+weighted avg     0.2426    0.4023    0.3021       343
+
+EVAL:   micro_F1. 0.3026 |  macro_F1 0.3020 | BEST F1: 0.3181 27
+
+Epoch:   32 2023-02-07 11:28:23.710524
+[[70068    87    88]
+ [   39 21197     1]
+ [   22     9 21966]]
+0.9974656522888045
+              precision    recall  f1-score   support
+
+           c     0.9485    0.9685    0.9584      1237
+           p     0.9598    0.9756    0.9676      1271
+
+   micro avg     0.9542    0.9721    0.9631      2508
+   macro avg     0.9541    0.9720    0.9630      2508
+weighted avg     0.9542    0.9721    0.9631      2508
+
+TRAIN:  micro_F1. 0.9631 |  macro_F1 0.9630
+[[7798 1298 1306]
+ [ 415 2148  405]
+ [ 491  673 1863]]
+0.662309445846491
+              precision    recall  f1-score   support
+
+           c     0.2154    0.4142    0.2834       169
+           p     0.2457    0.4080    0.3067       174
+
+   micro avg     0.2296    0.4111    0.2947       343
+   macro avg     0.2305    0.4111    0.2950       343
+weighted avg     0.2308    0.4111    0.2952       343
+
+EVAL:   micro_F1. 0.2947 |  macro_F1 0.2950 | BEST F1: 0.3181 27
+
+Epoch:   33 2023-02-07 11:31:28.847534
+[[70155    41    47]
+ [   38 21191     8]
+ [   24     0 21973]]
+0.9983630307550674
+              precision    recall  f1-score   support
+
+           c     0.9663    0.9749    0.9706      1237
+           p     0.9705    0.9827    0.9765      1271
+
+   micro avg     0.9684    0.9789    0.9736      2508
+   macro avg     0.9684    0.9788    0.9736      2508
+weighted avg     0.9684    0.9789    0.9736      2508
+
+TRAIN:  micro_F1. 0.9736 |  macro_F1 0.9736
+[[8631  875  896]
+ [ 704 1856  408]
+ [ 707  544 1776]]
+0.6735229629110804
+              precision    recall  f1-score   support
+
+           c     0.1985    0.3195    0.2449       169
+           p     0.2805    0.3966    0.3286       174
+
+   micro avg     0.2375    0.3586    0.2857       343
+   macro avg     0.2395    0.3580    0.2867       343
+weighted avg     0.2401    0.3586    0.2873       343
+
+EVAL:   micro_F1. 0.2857 |  macro_F1 0.2867 | BEST F1: 0.3181 27
+
+Epoch:   34 2023-02-07 11:34:34.673218
+[[70157    46    40]
+ [   26 21197    14]
+ [   31     4 21962]]
+0.9982804401328665
+              precision    recall  f1-score   support
+
+           c     0.9688    0.9782    0.9735      1237
+           p     0.9765    0.9827    0.9796      1271
+
+   micro avg     0.9727    0.9805    0.9766      2508
+   macro avg     0.9727    0.9804    0.9765      2508
+weighted avg     0.9727    0.9805    0.9766      2508
+
+TRAIN:  micro_F1. 0.9766 |  macro_F1 0.9765
+[[8178  980 1244]
+ [ 553 1909  506]
+ [ 521  470 2036]]
+0.6777744877367974
+              precision    recall  f1-score   support
+
+           c     0.2273    0.3846    0.2857       169
+           p     0.2396    0.4310    0.3080       174
+
+   micro avg     0.2337    0.4082    0.2972       343
+   macro avg     0.2334    0.4078    0.2969       343
+weighted avg     0.2335    0.4082    0.2970       343
+
+EVAL:   micro_F1. 0.2972 |  macro_F1 0.2969 | BEST F1: 0.3181 27
+
+Epoch:   35 2023-02-07 11:37:40.074159
+[[70152    42    49]
+ [   26 21211     0]
+ [   14    13 21970]]
+0.9984782638068485
+              precision    recall  f1-score   support
+
+           c     0.9695    0.9766    0.9730      1237
+           p     0.9712    0.9827    0.9769      1271
+
+   micro avg     0.9704    0.9797    0.9750      2508
+   macro avg     0.9704    0.9796    0.9750      2508
+weighted avg     0.9704    0.9797    0.9750      2508
+
+TRAIN:  micro_F1. 0.9750 |  macro_F1 0.9750
+[[8248 1063 1091]
+ [ 514 2030  424]
+ [ 566  590 1871]]
+0.6766746530149698
+              precision    recall  f1-score   support
+
+           c     0.2300    0.3905    0.2895       169
+           p     0.2509    0.3966    0.3073       174
+
+   micro avg     0.2402    0.3936    0.2983       343
+   macro avg     0.2404    0.3935    0.2984       343
+weighted avg     0.2406    0.3936    0.2985       343
+
+EVAL:   micro_F1. 0.2983 |  macro_F1 0.2984 | BEST F1: 0.3181 27
+
+Epoch:   36 2023-02-07 11:40:45.872410
+[[70151    26    66]
+ [   40 21197     0]
+ [   15     6 21976]]
+0.9984274536705051
+              precision    recall  f1-score   support
+
+           c     0.9703    0.9782    0.9742      1237
+           p     0.9652    0.9827    0.9739      1271
+
+   micro avg     0.9677    0.9805    0.9741      2508
+   macro avg     0.9678    0.9804    0.9741      2508
+weighted avg     0.9677    0.9805    0.9741      2508
+
+TRAIN:  micro_F1. 0.9741 |  macro_F1 0.9741
+[[8650  819  933]
+ [ 742 1795  431]
+ [ 691  437 1899]]
+0.6815935177258403
+              precision    recall  f1-score   support
+
+           c     0.2120    0.3136    0.2530       169
+           p     0.2846    0.4253    0.3410       174
+
+   micro avg     0.2490    0.3703    0.2978       343
+   macro avg     0.2483    0.3694    0.2970       343
+weighted avg     0.2488    0.3703    0.2976       343
+
+EVAL:   micro_F1. 0.2978 |  macro_F1 0.2970 | BEST F1: 0.3181 27
+
+Epoch:   37 2023-02-07 11:43:50.315870
+[[70177    20    46]
+ [   44 21193     0]
+ [   14     6 21977]]
+0.998656405077778
+              precision    recall  f1-score   support
+
+           c     0.9760    0.9846    0.9803      1237
+           p     0.9713    0.9835    0.9773      1271
+
+   micro avg     0.9736    0.9841    0.9788      2508
+   macro avg     0.9736    0.9841    0.9788      2508
+weighted avg     0.9736    0.9841    0.9788      2508
+
+TRAIN:  micro_F1. 0.9788 |  macro_F1 0.9788
+[[8262 1004 1136]
+ [ 561 2000  407]
+ [ 588  580 1859]]
+0.6742718305897023
+              precision    recall  f1-score   support
+
+           c     0.2324    0.3905    0.2914       169
+           p     0.2563    0.4080    0.3149       174
+
+   micro avg     0.2442    0.3994    0.3031       343
+   macro avg     0.2444    0.3993    0.3031       343
+weighted avg     0.2445    0.3994    0.3033       343
+
+EVAL:   micro_F1. 0.3031 |  macro_F1 0.3031 | BEST F1: 0.3181 27
+
+Epoch:   38 2023-02-07 11:46:54.812376
+[[70183    31    29]
+ [   16 21221     0]
+ [   27    16 21954]]
+0.998715818594889
+              precision    recall  f1-score   support
+
+           c     0.9815    0.9879    0.9847      1237
+           p     0.9759    0.9874    0.9816      1271
+
+   micro avg     0.9787    0.9876    0.9831      2508
+   macro avg     0.9787    0.9876    0.9832      2508
+weighted avg     0.9787    0.9876    0.9831      2508
+
+TRAIN:  micro_F1. 0.9831 |  macro_F1 0.9832
+[[7941 1091 1370]
+ [ 475 2047  446]
+ [ 519  552 1956]]
+0.6705350303517591
+              precision    recall  f1-score   support
+
+           c     0.2289    0.3846    0.2870       169
+           p     0.2327    0.4253    0.3008       174
+
+   micro avg     0.2309    0.4052    0.2942       343
+   macro avg     0.2308    0.4050    0.2939       343
+weighted avg     0.2308    0.4052    0.2940       343
+
+EVAL:   micro_F1. 0.2942 |  macro_F1 0.2939 | BEST F1: 0.3181 27
+
+Epoch:   39 2023-02-07 11:50:00.015026
+[[70219     9    15]
+ [   16 21221     0]
+ [   55     6 21936]]
+0.998954936758819
+              precision    recall  f1-score   support
+
+           c     0.9800    0.9895    0.9847      1237
+           p     0.9773    0.9835    0.9804      1271
+
+   micro avg     0.9786    0.9864    0.9825      2508
+   macro avg     0.9787    0.9865    0.9826      2508
+weighted avg     0.9786    0.9864    0.9825      2508
+
+TRAIN:  micro_F1. 0.9825 |  macro_F1 0.9826
+[[8877  879  646]
+ [ 702 2002  264]
+ [ 827  687 1513]]
+0.6736886613487773
+              precision    recall  f1-score   support
+
+           c     0.2244    0.4024    0.2881       169
+           p     0.2794    0.3276    0.3016       174
+
+   micro avg     0.2465    0.3644    0.2941       343
+   macro avg     0.2519    0.3650    0.2949       343
+weighted avg     0.2523    0.3644    0.2950       343
+
+EVAL:   micro_F1. 0.2941 |  macro_F1 0.2949 | BEST F1: 0.3181 27
+
+Epoch:   40 2023-02-07 11:53:09.946818
+[[70203    17    23]
+ [    4 21233     0]
+ [   23     3 21971]]
+0.9992814456765716
+              precision    recall  f1-score   support
+
+           c     0.9839    0.9903    0.9871      1237
+           p     0.9797    0.9890    0.9843      1271
+
+   micro avg     0.9818    0.9896    0.9857      2508
+   macro avg     0.9818    0.9896    0.9857      2508
+weighted avg     0.9818    0.9896    0.9857      2508
+
+TRAIN:  micro_F1. 0.9857 |  macro_F1 0.9857
+[[8505  899  998]
+ [ 660 1865  443]
+ [ 714  490 1823]]
+0.6725866114773768
+              precision    recall  f1-score   support
+
+           c     0.2243    0.3609    0.2766       169
+           p     0.2338    0.3736    0.2876       174
+
+   micro avg     0.2291    0.3673    0.2822       343
+   macro avg     0.2290    0.3673    0.2821       343
+weighted avg     0.2291    0.3673    0.2822       343
+
+EVAL:   micro_F1. 0.2822 |  macro_F1 0.2821 | BEST F1: 0.3181 27
+
+Epoch:   41 2023-02-07 11:56:26.979764
+[[70214     1    28]
+ [   18 21212     7]
+ [   19     0 21978]]
+0.9992302499690334
+              precision    recall  f1-score   support
+
+           c     0.9927    0.9919    0.9923      1237
+           p     0.9798    0.9898    0.9847      1271
+
+   micro avg     0.9861    0.9908    0.9885      2508
+   macro avg     0.9862    0.9908    0.9885      2508
+weighted avg     0.9861    0.9908    0.9885      2508
+
+TRAIN:  micro_F1. 0.9885 |  macro_F1 0.9885
+[[8637  830  935]
+ [ 675 1847  446]
+ [ 725  447 1855]]
+0.6812952877491809
+              precision    recall  f1-score   support
+
+           c     0.2724    0.3964    0.3229       169
+           p     0.2920    0.4195    0.3443       174
+
+   micro avg     0.2823    0.4082    0.3337       343
+   macro avg     0.2822    0.4080    0.3336       343
+weighted avg     0.2823    0.4082    0.3338       343
+
+EVAL:   micro_F1. 0.3337 |  macro_F1 0.3336 | BEST F1: 0.3181 27
+[[16828  1496  1901]
+ [ 1753  3447   859]
+ [ 1642   843  3877]]
+0.6702019496166942
+              precision    recall  f1-score   support
+
+           c     0.2561    0.3559    0.2979       354
+           p     0.2228    0.3390    0.2689       351
+
+   micro avg     0.2388    0.3475    0.2831       705
+   macro avg     0.2395    0.3475    0.2834       705
+weighted avg     0.2395    0.3475    0.2835       705
+
+TEST:   micro_F1. 0.2831 |  macro_F1 0.2834
+
+Epoch:   42 2023-02-07 11:59:59.075206
+[[70194    15    34]
+ [    9 21228     0]
+ [    9     0 21988]]
+0.9993270520777776
+              precision    recall  f1-score   support
+
+           c     0.9871    0.9919    0.9895      1237
+           p     0.9806    0.9921    0.9863      1271
+
+   micro avg     0.9838    0.9920    0.9879      2508
+   macro avg     0.9838    0.9920    0.9879      2508
+weighted avg     0.9838    0.9920    0.9879      2508
+
+TRAIN:  micro_F1. 0.9879 |  macro_F1 0.9879
+[[8364  895 1143]
+ [ 603 1899  466]
+ [ 678  457 1892]]
+0.67493501605209
+              precision    recall  f1-score   support
+
+           c     0.2319    0.3609    0.2824       169
+           p     0.2784    0.4368    0.3400       174
+
+   micro avg     0.2556    0.3994    0.3117       343
+   macro avg     0.2552    0.3989    0.3112       343
+weighted avg     0.2555    0.3994    0.3116       343
+
+EVAL:   micro_F1. 0.3117 |  macro_F1 0.3112 | BEST F1: 0.3337 41
+
+Epoch:   43 2023-02-07 12:03:04.885823
+[[70216     7    20]
+ [   10 21227     0]
+ [   12     0 21985]]
+0.9995078951947433
+              precision    recall  f1-score   support
+
+           c     0.9911    0.9927    0.9919      1237
+           p     0.9859    0.9937    0.9898      1271
+
+   micro avg     0.9885    0.9932    0.9909      2508
+   macro avg     0.9885    0.9932    0.9909      2508
+weighted avg     0.9885    0.9932    0.9909      2508
+
+TRAIN:  micro_F1. 0.9909 |  macro_F1 0.9909
+[[8191  970 1241]
+ [ 558 1947  463]
+ [ 570  485 1972]]
+0.6767947794876816
+              precision    recall  f1-score   support
+
+           c     0.2453    0.3846    0.2995       169
+           p     0.2760    0.4425    0.3400       174
+
+   micro avg     0.2610    0.4140    0.3202       343
+   macro avg     0.2606    0.4136    0.3197       343
+weighted avg     0.2609    0.4140    0.3200       343
+
+EVAL:   micro_F1. 0.3202 |  macro_F1 0.3197 | BEST F1: 0.3337 41
+
+Epoch:   44 2023-02-07 12:06:10.547184
+[[70210    10    23]
+ [   11 21226     0]
+ [   15     0 21982]]
+0.9994073265113214
+              precision    recall  f1-score   support
+
+           c     0.9903    0.9927    0.9915      1237
+           p     0.9813    0.9913    0.9863      1271
+
+   micro avg     0.9857    0.9920    0.9889      2508
+   macro avg     0.9858    0.9920    0.9889      2508
+weighted avg     0.9858    0.9920    0.9889      2508
+
+TRAIN:  micro_F1. 0.9889 |  macro_F1 0.9889
+[[8213  894 1295]
+ [ 527 1931  510]
+ [ 571  443 2013]]
+0.6802436781912151
+              precision    recall  f1-score   support
+
+           c     0.2764    0.4024    0.3277       169
+           p     0.2619    0.4425    0.3291       174
+
+   micro avg     0.2685    0.4227    0.3284       343
+   macro avg     0.2692    0.4224    0.3284       343
+weighted avg     0.2691    0.4227    0.3284       343
+
+EVAL:   micro_F1. 0.3284 |  macro_F1 0.3284 | BEST F1: 0.3337 41
+
+Epoch:   45 2023-02-07 12:09:15.755819
+[[70215     4    24]
+ [    4 21233     0]
+ [    9     0 21988]]
+0.9995899758886931
+              precision    recall  f1-score   support
+
+           c     0.9943    0.9951    0.9947      1237
+           p     0.9868    0.9969    0.9918      1271
+
+   micro avg     0.9905    0.9960    0.9932      2508
+   macro avg     0.9906    0.9960    0.9933      2508
+weighted avg     0.9905    0.9960    0.9932      2508
+
+TRAIN:  micro_F1. 0.9932 |  macro_F1 0.9933
+[[8107 1184 1111]
+ [ 460 2106  402]
+ [ 563  618 1846]]
+0.673610016260111
+              precision    recall  f1-score   support
+
+           c     0.2339    0.4083    0.2974       169
+           p     0.2599    0.4138    0.3193       174
+
+   micro avg     0.2465    0.4111    0.3082       343
+   macro avg     0.2469    0.4110    0.3084       343
+weighted avg     0.2471    0.4111    0.3085       343
+
+EVAL:   micro_F1. 0.3082 |  macro_F1 0.3084 | BEST F1: 0.3337 41
+
+Epoch:   46 2023-02-07 12:12:20.680328
+[[70212     0    31]
+ [    8 21229     0]
+ [    4     0 21993]]
+0.9995701390655789
+              precision    recall  f1-score   support
+
+           c     0.9960    0.9960    0.9960      1237
+           p     0.9836    0.9937    0.9886      1271
+
+   micro avg     0.9897    0.9948    0.9922      2508
+   macro avg     0.9898    0.9948    0.9923      2508
+weighted avg     0.9897    0.9948    0.9923      2508
+
+TRAIN:  micro_F1. 0.9922 |  macro_F1 0.9923
+[[8404  790 1208]
+ [ 597 1872  499]
+ [ 617  457 1953]]
+0.6795867330566413
+              precision    recall  f1-score   support
+
+           c     0.2500    0.3669    0.2974       169
+           p     0.2760    0.4425    0.3400       174
+
+   micro avg     0.2638    0.4052    0.3195       343
+   macro avg     0.2630    0.4047    0.3187       343
+weighted avg     0.2632    0.4052    0.3190       343
+
+EVAL:   micro_F1. 0.3195 |  macro_F1 0.3187 | BEST F1: 0.3337 41
+
+Epoch:   47 2023-02-07 12:15:26.629247
+[[70218     8    17]
+ [   11 21226     0]
+ [   16     0 21981]]
+0.9994774707681686
+              precision    recall  f1-score   support
+
+           c     0.9927    0.9951    0.9939      1237
+           p     0.9852    0.9945    0.9898      1271
+
+   micro avg     0.9889    0.9948    0.9919      2508
+   macro avg     0.9890    0.9948    0.9919      2508
+weighted avg     0.9889    0.9948    0.9919      2508
+
+TRAIN:  micro_F1. 0.9919 |  macro_F1 0.9919
+[[8289 1232  881]
+ [ 453 2202  313]
+ [ 603  761 1663]]
+0.6732026146459482
+              precision    recall  f1-score   support
+
+           c     0.2257    0.4260    0.2951       169
+           p     0.2788    0.3621    0.3150       174
+
+   micro avg     0.2477    0.3936    0.3041       343
+   macro avg     0.2522    0.3941    0.3050       343
+weighted avg     0.2526    0.3936    0.3052       343
+
+EVAL:   micro_F1. 0.3041 |  macro_F1 0.3050 | BEST F1: 0.3337 41
+
+Epoch:   48 2023-02-07 12:18:41.590655
+[[70223     6    14]
+ [   15 21222     0]
+ [   18     0 21979]]
+0.9994669367196196
+              precision    recall  f1-score   support
+
+           c     0.9951    0.9951    0.9951      1237
+           p     0.9875    0.9937    0.9906      1271
+
+   micro avg     0.9913    0.9944    0.9928      2508
+   macro avg     0.9913    0.9944    0.9929      2508
+weighted avg     0.9913    0.9944    0.9928      2508
+
+TRAIN:  micro_F1. 0.9928 |  macro_F1 0.9929
+[[8215 1008 1179]
+ [ 555 1967  446]
+ [ 582  478 1967]]
+0.6795856784010873
+              precision    recall  f1-score   support
+
+           c     0.2435    0.3905    0.3000       169
+           p     0.2691    0.4253    0.3296       174
+
+   micro avg     0.2564    0.4082    0.3150       343
+   macro avg     0.2563    0.4079    0.3148       343
+weighted avg     0.2565    0.4082    0.3150       343
+
+EVAL:   micro_F1. 0.3150 |  macro_F1 0.3148 | BEST F1: 0.3337 41
+
+Epoch:   49 2023-02-07 12:21:54.939920
+[[70225     5    13]
+ [   13 21222     2]
+ [   16     0 21981]]
+0.9994966095119405
+              precision    recall  f1-score   support
+
+           c     0.9943    0.9951    0.9947      1237
+           p     0.9883    0.9953    0.9918      1271
+
+   micro avg     0.9913    0.9952    0.9932      2508
+   macro avg     0.9913    0.9952    0.9933      2508
+weighted avg     0.9913    0.9952    0.9932      2508
+
+TRAIN:  micro_F1. 0.9932 |  macro_F1 0.9933
+[[8587  852  963]
+ [ 559 2013  396]
+ [ 733  446 1848]]
+0.6936216983513613
+              precision    recall  f1-score   support
+
+           c     0.2792    0.4379    0.3410       169
+           p     0.2932    0.4195    0.3452       174
+
+   micro avg     0.2860    0.4286    0.3431       343
+   macro avg     0.2862    0.4287    0.3431       343
+weighted avg     0.2863    0.4286    0.3431       343
+
+EVAL:   micro_F1. 0.3431 |  macro_F1 0.3431 | BEST F1: 0.3337 41
+[[16475  1709  2041]
+ [ 1680  3491   888]
+ [ 1454   941  3967]]
+0.6659696755136906
+              precision    recall  f1-score   support
+
+           c     0.2591    0.3616    0.3019       354
+           p     0.2420    0.3675    0.2919       351
+
+   micro avg     0.2502    0.3645    0.2968       705
+   macro avg     0.2506    0.3646    0.2969       705
+weighted avg     0.2506    0.3645    0.2969       705
+
+TEST:   micro_F1. 0.2968 |  macro_F1 0.2969
+
+Epoch:   50 2023-02-07 12:25:23.854397
+[[70230     1    12]
+ [   10 21227     0]
+ [   16     0 21981]]
+0.9996089576006443
+              precision    recall  f1-score   support
+
+           c     0.9968    0.9976    0.9972      1237
+           p     0.9922    0.9969    0.9945      1271
+
+   micro avg     0.9944    0.9972    0.9958      2508
+   macro avg     0.9945    0.9972    0.9958      2508
+weighted avg     0.9944    0.9972    0.9958      2508
+
+TRAIN:  micro_F1. 0.9958 |  macro_F1 0.9958
+[[8938  628  836]
+ [ 693 1814  461]
+ [ 851  400 1776]]
+0.6875673305237724
+              precision    recall  f1-score   support
+
+           c     0.2511    0.3432    0.2900       169
+           p     0.2800    0.4023    0.3302       174
+
+   micro avg     0.2661    0.3732    0.3107       343
+   macro avg     0.2655    0.3727    0.3101       343
+weighted avg     0.2658    0.3732    0.3104       343
+
+EVAL:   micro_F1. 0.3107 |  macro_F1 0.3101 | BEST F1: 0.3431 49
+
+Epoch:   51 2023-02-07 12:28:28.653557
+[[70223     6    14]
+ [    3 21234     0]
+ [   19     0 21978]]
+0.999579658388329
+              precision    recall  f1-score   support
+
+           c     0.9952    0.9960    0.9956      1237
+           p     0.9844    0.9921    0.9882      1271
+
+   micro avg     0.9897    0.9940    0.9918      2508
+   macro avg     0.9898    0.9940    0.9919      2508
+weighted avg     0.9897    0.9940    0.9919      2508
+
+TRAIN:  micro_F1. 0.9918 |  macro_F1 0.9919
+[[8301  870 1231]
+ [ 522 1979  467]
+ [ 583  430 2014]]
+0.6898150394705981
+              precision    recall  f1-score   support
+
+           c     0.2840    0.4201    0.3389       169
+           p     0.2730    0.4425    0.3377       174
+
+   micro avg     0.2782    0.4315    0.3383       343
+   macro avg     0.2785    0.4313    0.3383       343
+weighted avg     0.2784    0.4315    0.3383       343
+
+EVAL:   micro_F1. 0.3383 |  macro_F1 0.3383 | BEST F1: 0.3431 49
+
+Epoch:   52 2023-02-07 12:31:33.531715
+[[70226     0    17]
+ [    7 21230     0]
+ [   11     0 21986]]
+0.9996498897069531
+              precision    recall  f1-score   support
+
+           c     0.9960    0.9968    0.9964      1237
+           p     0.9914    0.9961    0.9937      1271
+
+   micro avg     0.9936    0.9964    0.9950      2508
+   macro avg     0.9937    0.9964    0.9950      2508
+weighted avg     0.9936    0.9964    0.9950      2508
+
+TRAIN:  micro_F1. 0.9950 |  macro_F1 0.9950
+[[8737  646 1019]
+ [ 669 1861  438]
+ [ 779  387 1861]]
+0.6901095255510735
+              precision    recall  f1-score   support
+
+           c     0.2802    0.3846    0.3242       169
+           p     0.2920    0.4195    0.3443       174
+
+   micro avg     0.2863    0.4023    0.3345       343
+   macro avg     0.2861    0.4021    0.3343       343
+weighted avg     0.2862    0.4023    0.3344       343
+
+EVAL:   micro_F1. 0.3345 |  macro_F1 0.3343 | BEST F1: 0.3431 49
+
+Epoch:   53 2023-02-07 12:34:43.301656
+[[70210     6    27]
+ [    0 21237     0]
+ [    4     0 21993]]
+0.9996303526320198
+              precision    recall  f1-score   support
+
+           c     0.9992    0.9992    0.9992      1237
+           p     0.9906    0.9953    0.9929      1271
+
+   micro avg     0.9948    0.9972    0.9960      2508
+   macro avg     0.9949    0.9972    0.9961      2508
+weighted avg     0.9948    0.9972    0.9960      2508
+
+TRAIN:  micro_F1. 0.9960 |  macro_F1 0.9961
+[[8223 1035 1144]
+ [ 456 2108  404]
+ [ 581  563 1883]]
+0.6837645225432722
+              precision    recall  f1-score   support
+
+           c     0.2857    0.4497    0.3494       169
+           p     0.2908    0.4195    0.3435       174
+
+   micro avg     0.2882    0.4344    0.3465       343
+   macro avg     0.2883    0.4346    0.3465       343
+weighted avg     0.2883    0.4344    0.3464       343
+
+EVAL:   micro_F1. 0.3465 |  macro_F1 0.3465 | BEST F1: 0.3431 49
+[[15687  2226  2312]
+ [ 1391  3856   812]
+ [ 1203  1109  4050]]
+0.6650747010156245
+              precision    recall  f1-score   support
+
+           c     0.2537    0.3870    0.3065       354
+           p     0.2694    0.3960    0.3206       351
+
+   micro avg     0.2614    0.3915    0.3135       705
+   macro avg     0.2615    0.3915    0.3136       705
+weighted avg     0.2615    0.3915    0.3135       705
+
+TEST:   micro_F1. 0.3135 |  macro_F1 0.3136
+
+Epoch:   54 2023-02-07 12:38:14.364149
+[[70225     2    16]
+ [    1 21236     0]
+ [   20     0 21977]]
+0.9996111335339286
+              precision    recall  f1-score   support
+
+           c     0.9976    0.9984    0.9980      1237
+           p     0.9867    0.9937    0.9902      1271
+
+   micro avg     0.9921    0.9960    0.9940      2508
+   macro avg     0.9921    0.9960    0.9941      2508
+weighted avg     0.9921    0.9960    0.9940      2508
+
+TRAIN:  micro_F1. 0.9940 |  macro_F1 0.9941
+[[8297  930 1175]
+ [ 504 2052  412]
+ [ 576  525 1926]]
+0.6872612816404188
+              precision    recall  f1-score   support
+
+           c     0.2791    0.4260    0.3372       169
+           p     0.2912    0.4368    0.3494       174
+
+   micro avg     0.2852    0.4315    0.3434       343
+   macro avg     0.2851    0.4314    0.3433       343
+weighted avg     0.2852    0.4315    0.3434       343
+
+EVAL:   micro_F1. 0.3434 |  macro_F1 0.3433 | BEST F1: 0.3465 53
+
+Epoch:   55 2023-02-07 12:41:31.568736
+[[70223     2    18]
+ [    3 21234     0]
+ [   10     0 21987]]
+0.9996703442950317
+              precision    recall  f1-score   support
+
+           c     0.9960    0.9984    0.9972      1237
+           p     0.9867    0.9961    0.9914      1271
+
+   micro avg     0.9913    0.9972    0.9942      2508
+   macro avg     0.9914    0.9972    0.9943      2508
+weighted avg     0.9913    0.9972    0.9942      2508
+
+TRAIN:  micro_F1. 0.9942 |  macro_F1 0.9943
+[[8468  805 1129]
+ [ 552 1955  461]
+ [ 656  441 1930]]
+0.688969185788609
+              precision    recall  f1-score   support
+
+           c     0.2792    0.3964    0.3276       169
+           p     0.2977    0.4483    0.3578       174
+
+   micro avg     0.2888    0.4227    0.3432       343
+   macro avg     0.2884    0.4224    0.3427       343
+weighted avg     0.2886    0.4227    0.3429       343
+
+EVAL:   micro_F1. 0.3432 |  macro_F1 0.3427 | BEST F1: 0.3465 53
+
+Epoch:   56 2023-02-07 12:44:37.847267
+[[70225     2    16]
+ [    0 21237     0]
+ [   14     0 21983]]
+0.9996810824087728
+              precision    recall  f1-score   support
+
+           c     0.9984    0.9992    0.9988      1237
+           p     0.9906    0.9953    0.9929      1271
+
+   micro avg     0.9944    0.9972    0.9958      2508
+   macro avg     0.9945    0.9972    0.9959      2508
+weighted avg     0.9944    0.9972    0.9958      2508
+
+TRAIN:  micro_F1. 0.9958 |  macro_F1 0.9959
+[[8071 1168 1163]
+ [ 475 2184  309]
+ [ 551  631 1845]]
+0.6792960237115283
+              precision    recall  f1-score   support
+
+           c     0.2574    0.4615    0.3305       169
+           p     0.2691    0.3851    0.3168       174
+
+   micro avg     0.2627    0.4227    0.3240       343
+   macro avg     0.2633    0.4233    0.3236       343
+weighted avg     0.2633    0.4227    0.3235       343
+
+EVAL:   micro_F1. 0.3240 |  macro_F1 0.3236 | BEST F1: 0.3465 53
+
+Epoch:   57 2023-02-07 12:47:48.058461
+[[70232     1    10]
+ [    1 21236     0]
+ [   16     0 21981]]
+0.9997208474912583
+              precision    recall  f1-score   support
+
+           c     0.9984    0.9984    0.9984      1237
+           p     0.9929    0.9961    0.9945      1271
+
+   micro avg     0.9956    0.9972    0.9964      2508
+   macro avg     0.9957    0.9972    0.9964      2508
+weighted avg     0.9956    0.9972    0.9964      2508
+
+TRAIN:  micro_F1. 0.9964 |  macro_F1 0.9964
+[[8669  836  897]
+ [ 607 1992  369]
+ [ 723  487 1817]]
+0.6929049931200928
+              precision    recall  f1-score   support
+
+           c     0.2649    0.4201    0.3249       169
+           p     0.3067    0.4195    0.3544       174
+
+   micro avg     0.2846    0.4198    0.3392       343
+   macro avg     0.2858    0.4198    0.3397       343
+weighted avg     0.2861    0.4198    0.3399       343
+
+EVAL:   micro_F1. 0.3392 |  macro_F1 0.3397 | BEST F1: 0.3465 53
+
+Epoch:   58 2023-02-07 12:50:54.228727
+[[70223     2    18]
+ [    2 21235     0]
+ [    9     0 21988]]
+0.9996905178392632
+              precision    recall  f1-score   support
+
+           c     0.9960    0.9976    0.9968      1237
+           p     0.9891    0.9961    0.9926      1271
+
+   micro avg     0.9925    0.9968    0.9946      2508
+   macro avg     0.9925    0.9968    0.9947      2508
+weighted avg     0.9925    0.9968    0.9946      2508
+
+TRAIN:  micro_F1. 0.9946 |  macro_F1 0.9947
+[[8158 1037 1207]
+ [ 518 2023  427]
+ [ 518  561 1948]]
+0.6787239318416649
+              precision    recall  f1-score   support
+
+           c     0.2453    0.3846    0.2995       169
+           p     0.2879    0.4253    0.3434       174
+
+   micro avg     0.2663    0.4052    0.3214       343
+   macro avg     0.2666    0.4050    0.3215       343
+weighted avg     0.2669    0.4052    0.3218       343
+
+EVAL:   micro_F1. 0.3214 |  macro_F1 0.3215 | BEST F1: 0.3465 53
+
+Epoch:   59 2023-02-07 12:53:59.467616
+[[70225     1    17]
+ [    0 21237     0]
+ [    9     0 21988]]
+0.9997311240748029
+              precision    recall  f1-score   support
+
+           c     0.9992    0.9992    0.9992      1237
+           p     0.9937    0.9969    0.9953      1271
+
+   micro avg     0.9964    0.9980    0.9972      2508
+   macro avg     0.9965    0.9980    0.9972      2508
+weighted avg     0.9964    0.9980    0.9972      2508
+
+TRAIN:  micro_F1. 0.9972 |  macro_F1 0.9972
+[[8442  898 1062]
+ [ 558 1947  463]
+ [ 585  497 1945]]
+0.6868675517698364
+              precision    recall  f1-score   support
+
+           c     0.2805    0.4083    0.3325       169
+           p     0.3036    0.4310    0.3563       174
+
+   micro avg     0.2921    0.4198    0.3445       343
+   macro avg     0.2921    0.4197    0.3444       343
+weighted avg     0.2922    0.4198    0.3446       343
+
+EVAL:   micro_F1. 0.3445 |  macro_F1 0.3444 | BEST F1: 0.3465 53
+
+Epoch:   60 2023-02-07 12:57:05.503324
+[[70218     0    25]
+ [    1 21236     0]
+ [    2     0 21995]]
+0.9997212389765706
+              precision    recall  f1-score   support
+
+           c     0.9992    0.9992    0.9992      1237
+           p     0.9937    0.9976    0.9957      1271
+
+   micro avg     0.9964    0.9984    0.9974      2508
+   macro avg     0.9965    0.9984    0.9974      2508
+weighted avg     0.9964    0.9984    0.9974      2508
+
+TRAIN:  micro_F1. 0.9974 |  macro_F1 0.9974
+[[8071  934 1397]
+ [ 522 1932  514]
+ [ 539  475 2013]]
+0.6726698933098638
+              precision    recall  f1-score   support
+
+           c     0.2695    0.4083    0.3247       169
+           p     0.2742    0.4713    0.3467       174
+
+   micro avg     0.2721    0.4402    0.3363       343
+   macro avg     0.2719    0.4398    0.3357       343
+weighted avg     0.2719    0.4402    0.3359       343
+
+EVAL:   micro_F1. 0.3363 |  macro_F1 0.3357 | BEST F1: 0.3465 53
+
+Epoch:   61 2023-02-07 13:00:13.559296
+[[70218     0    25]
+ [    2 21235     0]
+ [    2     0 21995]]
+0.9997110178865315
+              precision    recall  f1-score   support
+
+           c     0.9984    0.9984    0.9984      1237
+           p     0.9898    0.9969    0.9933      1271
+
+   micro avg     0.9940    0.9976    0.9958      2508
+   macro avg     0.9941    0.9976    0.9959      2508
+weighted avg     0.9941    0.9976    0.9958      2508
+
+TRAIN:  micro_F1. 0.9958 |  macro_F1 0.9959
+[[8100  820 1482]
+ [ 570 1825  573]
+ [ 507  411 2109]]
+0.6732977888881484
+              precision    recall  f1-score   support
+
+           c     0.2735    0.3787    0.3176       169
+           p     0.2718    0.4828    0.3478       174
+
+   micro avg     0.2726    0.4315    0.3341       343
+   macro avg     0.2727    0.4307    0.3327       343
+weighted avg     0.2727    0.4315    0.3329       343
+
+EVAL:   micro_F1. 0.3341 |  macro_F1 0.3327 | BEST F1: 0.3465 53
+
+Epoch:   62 2023-02-07 13:03:23.776715
+[[70229     2    12]
+ [    0 21237     0]
+ [   14     0 21983]]
+0.9997208633074953
+              precision    recall  f1-score   support
+
+           c     0.9984    0.9984    0.9984      1237
+           p     0.9922    0.9969    0.9945      1271
+
+   micro avg     0.9952    0.9976    0.9964      2508
+   macro avg     0.9953    0.9976    0.9964      2508
+weighted avg     0.9952    0.9976    0.9964      2508
+
+TRAIN:  micro_F1. 0.9964 |  macro_F1 0.9964
+[[8803  874  725]
+ [ 653 2042  273]
+ [ 825  566 1636]]
+0.6874661760571473
+              precision    recall  f1-score   support
+
+           c     0.2440    0.4201    0.3087       169
+           p     0.3137    0.3678    0.3386       174
+
+   micro avg     0.2727    0.3936    0.3222       343
+   macro avg     0.2789    0.3940    0.3237       343
+weighted avg     0.2794    0.3936    0.3239       343
+
+EVAL:   micro_F1. 0.3222 |  macro_F1 0.3237 | BEST F1: 0.3465 53
+
+Epoch:   63 2023-02-07 13:06:29.388727
+[[70219     0    24]
+ [    2 21235     0]
+ [    2     0 21995]]
+0.9997209597884487
+              precision    recall  f1-score   support
+
+           c     0.9984    0.9984    0.9984      1237
+           p     0.9945    0.9976    0.9961      1271
+
+   micro avg     0.9964    0.9980    0.9972      2508
+   macro avg     0.9964    0.9980    0.9972      2508
+weighted avg     0.9964    0.9980    0.9972      2508
+
+TRAIN:  micro_F1. 0.9972 |  macro_F1 0.9972
+[[8446  916 1040]
+ [ 564 2013  391]
+ [ 612  599 1816]]
+0.6807502466675407
+              precision    recall  f1-score   support
+
+           c     0.2605    0.4024    0.3163       169
+           p     0.2769    0.3851    0.3221       174
+
+   micro avg     0.2684    0.3936    0.3191       343
+   macro avg     0.2687    0.3937    0.3192       343
+weighted avg     0.2688    0.3936    0.3192       343
+
+EVAL:   micro_F1. 0.3191 |  macro_F1 0.3192 | BEST F1: 0.3465 53
+
+Epoch:   64 2023-02-07 13:09:35.764119
+[[70226     0    17]
+ [    3 21234     0]
+ [    9     0 21988]]
+0.9997106825742875
+              precision    recall  f1-score   support
+
+           c     0.9992    0.9992    0.9992      1237
+           p     0.9898    0.9961    0.9929      1271
+
+   micro avg     0.9944    0.9976    0.9960      2508
+   macro avg     0.9945    0.9976    0.9961      2508
+weighted avg     0.9945    0.9976    0.9960      2508
+
+TRAIN:  micro_F1. 0.9960 |  macro_F1 0.9961
+[[7704 1206 1492]
+ [ 385 2216  367]
+ [ 444  612 1971]]
+0.673860057767042
+              precision    recall  f1-score   support
+
+           c     0.2508    0.4438    0.3205       169
+           p     0.2630    0.4080    0.3198       174
+
+   micro avg     0.2566    0.4257    0.3202       343
+   macro avg     0.2569    0.4259    0.3202       343
+weighted avg     0.2570    0.4257    0.3202       343
+
+EVAL:   micro_F1. 0.3202 |  macro_F1 0.3202 | BEST F1: 0.3465 53
+
+Epoch:   65 2023-02-07 13:12:29.175394
+[[70219     0    24]
+ [    1 21236     0]
+ [    2     0 21995]]
+0.9997311808784947
+              precision    recall  f1-score   support
+
+           c     0.9992    0.9992    0.9992      1237
+           p     0.9930    0.9976    0.9953      1271
+
+   micro avg     0.9960    0.9984    0.9972      2508
+   macro avg     0.9961    0.9984    0.9972      2508
+weighted avg     0.9960    0.9984    0.9972      2508
+
+TRAIN:  micro_F1. 0.9972 |  macro_F1 0.9972
+[[8131 1049 1222]
+ [ 501 2104  363]
+ [ 524  611 1892]]
+0.6794485670314817
+              precision    recall  f1-score   support
+
+           c     0.2544    0.4320    0.3202       169
+           p     0.2763    0.4080    0.3295       174
+
+   micro avg     0.2647    0.4198    0.3247       343
+   macro avg     0.2653    0.4200    0.3248       343
+weighted avg     0.2655    0.4198    0.3249       343
+
+EVAL:   micro_F1. 0.3247 |  macro_F1 0.3248 | BEST F1: 0.3465 53
+
+Epoch:   66 2023-02-07 13:15:21.021745
+[[70222     1    20]
+ [    0 21237     0]
+ [    7     0 21990]]
+0.9997211966680357
+              precision    recall  f1-score   support
+
+           c     0.9992    0.9992    0.9992      1237
+           p     0.9914    0.9961    0.9937      1271
+
+   micro avg     0.9952    0.9976    0.9964      2508
+   macro avg     0.9953    0.9976    0.9965      2508
+weighted avg     0.9952    0.9976    0.9964      2508
+
+TRAIN:  micro_F1. 0.9964 |  macro_F1 0.9965
+[[8444  951 1007]
+ [ 566 2054  348]
+ [ 615  555 1857]]
+0.6892795062979112
+              precision    recall  f1-score   support
+
+           c     0.2772    0.4379    0.3394       169
+           p     0.3138    0.4310    0.3632       174
+
+   micro avg     0.2945    0.4344    0.3510       343
+   macro avg     0.2955    0.4345    0.3513       343
+weighted avg     0.2957    0.4344    0.3515       343
+
+EVAL:   micro_F1. 0.3510 |  macro_F1 0.3513 | BEST F1: 0.3465 53
+[[16202  1894  2129]
+ [ 1534  3789   736]
+ [ 1253  1173  3936]]
+0.6703790249635864
+              precision    recall  f1-score   support
+
+           c     0.2701    0.3983    0.3219       354
+           p     0.2720    0.3875    0.3196       351
+
+   micro avg     0.2710    0.3929    0.3208       705
+   macro avg     0.2711    0.3929    0.3208       705
+weighted avg     0.2711    0.3929    0.3208       705
+
+TEST:   micro_F1. 0.3208 |  macro_F1 0.3208
+
+Epoch:   67 2023-02-07 13:18:23.894473
+[[70222     0    21]
+ [    1 21236     0]
+ [    5     0 21992]]
+0.999731156771629
+              precision    recall  f1-score   support
+
+           c     0.9992    0.9992    0.9992      1237
+           p     0.9922    0.9969    0.9945      1271
+
+   micro avg     0.9956    0.9980    0.9968      2508
+   macro avg     0.9957    0.9980    0.9968      2508
+weighted avg     0.9956    0.9980    0.9968      2508
+
+TRAIN:  micro_F1. 0.9968 |  macro_F1 0.9968
+[[8641  711 1050]
+ [ 599 1847  522]
+ [ 661  408 1958]]
+0.6903143067205147
+              precision    recall  f1-score   support
+
+           c     0.2902    0.3846    0.3308       169
+           p     0.3023    0.4483    0.3611       174
+
+   micro avg     0.2967    0.4169    0.3467       343
+   macro avg     0.2963    0.4164    0.3459       343
+weighted avg     0.2963    0.4169    0.3462       343
+
+EVAL:   micro_F1. 0.3467 |  macro_F1 0.3459 | BEST F1: 0.3510 66
+
+Epoch:   68 2023-02-07 13:21:08.341337
+[[70222     0    21]
+ [    1 21236     0]
+ [    5     0 21992]]
+0.999731156771629
+              precision    recall  f1-score   support
+
+           c     0.9992    0.9992    0.9992      1237
+           p     0.9922    0.9969    0.9945      1271
+
+   micro avg     0.9956    0.9980    0.9968      2508
+   macro avg     0.9957    0.9980    0.9968      2508
+weighted avg     0.9956    0.9980    0.9968      2508
+
+TRAIN:  micro_F1. 0.9968 |  macro_F1 0.9968
+[[8696  716  990]
+ [ 637 1898  433]
+ [ 716  475 1836]]
+0.6870970406813707
+              precision    recall  f1-score   support
+
+           c     0.2918    0.4024    0.3383       169
+           p     0.3178    0.4310    0.3659       174
+
+   micro avg     0.3049    0.4169    0.3522       343
+   macro avg     0.3048    0.4167    0.3521       343
+weighted avg     0.3050    0.4169    0.3523       343
+
+EVAL:   micro_F1. 0.3522 |  macro_F1 0.3521 | BEST F1: 0.3510 66
+[[16792  1337  2096]
+ [ 1840  3333   886]
+ [ 1473   792  4097]]
+0.6736509485269137
+              precision    recall  f1-score   support
+
+           c     0.2694    0.3333    0.2980       354
+           p     0.2556    0.3903    0.3089       351
+
+   micro avg     0.2618    0.3617    0.3038       705
+   macro avg     0.2625    0.3618    0.3034       705
+weighted avg     0.2625    0.3617    0.3034       705
+
+TEST:   micro_F1. 0.3038 |  macro_F1 0.3034
+
+Epoch:   69 2023-02-07 13:24:10.743735
+[[70223     0    20]
+ [    1 21236     0]
+ [    8     0 21989]]
+0.9997112454439406
+              precision    recall  f1-score   support
+
+           c     0.9992    0.9992    0.9992      1237
+           p     0.9898    0.9961    0.9929      1271
+
+   micro avg     0.9944    0.9976    0.9960      2508
+   macro avg     0.9945    0.9976    0.9961      2508
+weighted avg     0.9945    0.9976    0.9960      2508
+
+TRAIN:  micro_F1. 0.9960 |  macro_F1 0.9961
+[[8152  985 1265]
+ [ 507 2042  419]
+ [ 559  515 1953]]
+0.6814885968855992
+              precision    recall  f1-score   support
+
+           c     0.2587    0.3964    0.3131       169
+           p     0.3043    0.4425    0.3607       174
+
+   micro avg     0.2812    0.4198    0.3368       343
+   macro avg     0.2815    0.4195    0.3369       343
+weighted avg     0.2819    0.4198    0.3372       343
+
+EVAL:   micro_F1. 0.3368 |  macro_F1 0.3369 | BEST F1: 0.3522 68
+
+Epoch:   70 2023-02-07 13:26:54.354769
+[[70222     0    21]
+ [    0 21237     0]
+ [    5     0 21992]]
+0.9997413774245657
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9922    0.9969    0.9945      1271
+
+   micro avg     0.9960    0.9984    0.9972      2508
+   macro avg     0.9961    0.9984    0.9973      2508
+weighted avg     0.9960    0.9984    0.9972      2508
+
+TRAIN:  micro_F1. 0.9972 |  macro_F1 0.9973
+[[8572  780 1050]
+ [ 597 1959  412]
+ [ 691  462 1874]]
+0.690085750872463
+              precision    recall  f1-score   support
+
+           c     0.2840    0.4083    0.3350       169
+           p     0.3391    0.4483    0.3861       174
+
+   micro avg     0.3108    0.4286    0.3603       343
+   macro avg     0.3115    0.4283    0.3605       343
+weighted avg     0.3119    0.4286    0.3609       343
+
+EVAL:   micro_F1. 0.3603 |  macro_F1 0.3605 | BEST F1: 0.3522 68
+[[16456  1687  2082]
+ [ 1673  3538   848]
+ [ 1381   839  4142]]
+0.6762052153147792
+              precision    recall  f1-score   support
+
+           c     0.2854    0.3701    0.3223       354
+           p     0.2796    0.4103    0.3326       351
+
+   micro avg     0.2823    0.3901    0.3276       705
+   macro avg     0.2825    0.3902    0.3274       705
+weighted avg     0.2825    0.3901    0.3274       705
+
+TEST:   micro_F1. 0.3276 |  macro_F1 0.3274
+
+Epoch:   71 2023-02-07 13:29:55.418257
+[[70223     0    20]
+ [    1 21236     0]
+ [    6     0 21991]]
+0.9997311487343286
+              precision    recall  f1-score   support
+
+           c     0.9992    0.9992    0.9992      1237
+           p     0.9937    0.9969    0.9953      1271
+
+   micro avg     0.9964    0.9980    0.9972      2508
+   macro avg     0.9965    0.9980    0.9972      2508
+weighted avg     0.9964    0.9980    0.9972      2508
+
+TRAIN:  micro_F1. 0.9972 |  macro_F1 0.9972
+[[8284  946 1172]
+ [ 548 1990  430]
+ [ 616  575 1836]]
+0.6723112390667915
+              precision    recall  f1-score   support
+
+           c     0.2840    0.4083    0.3350       169
+           p     0.2771    0.3966    0.3262       174
+
+   micro avg     0.2805    0.4023    0.3305       343
+   macro avg     0.2805    0.4024    0.3306       343
+weighted avg     0.2805    0.4023    0.3305       343
+
+EVAL:   micro_F1. 0.3305 |  macro_F1 0.3306 | BEST F1: 0.3603 70
+
+Epoch:   72 2023-02-07 13:32:37.902828
+[[70220     0    23]
+ [    1 21236     0]
+ [    3     0 21994]]
+0.9997311728437119
+              precision    recall  f1-score   support
+
+           c     0.9992    0.9992    0.9992      1237
+           p     0.9922    0.9969    0.9945      1271
+
+   micro avg     0.9956    0.9980    0.9968      2508
+   macro avg     0.9957    0.9980    0.9968      2508
+weighted avg     0.9956    0.9980    0.9968      2508
+
+TRAIN:  micro_F1. 0.9968 |  macro_F1 0.9968
+[[8600  795 1007]
+ [ 623 1919  426]
+ [ 725  507 1795]]
+0.6797607285546551
+              precision    recall  f1-score   support
+
+           c     0.2827    0.3964    0.3300       169
+           p     0.3319    0.4425    0.3793       174
+
+   micro avg     0.3070    0.4198    0.3547       343
+   macro avg     0.3073    0.4195    0.3547       343
+weighted avg     0.3077    0.4198    0.3550       343
+
+EVAL:   micro_F1. 0.3547 |  macro_F1 0.3547 | BEST F1: 0.3603 70
+
+Epoch:   73 2023-02-07 13:35:22.426808
+[[70221     0    22]
+ [    1 21236     0]
+ [    4     0 21993]]
+0.9997311648080901
+              precision    recall  f1-score   support
+
+           c     0.9992    0.9992    0.9992      1237
+           p     0.9937    0.9969    0.9953      1271
+
+   micro avg     0.9964    0.9980    0.9972      2508
+   macro avg     0.9965    0.9980    0.9972      2508
+weighted avg     0.9964    0.9980    0.9972      2508
+
+TRAIN:  micro_F1. 0.9972 |  macro_F1 0.9972
+[[8873  775  754]
+ [ 673 1993  302]
+ [ 834  595 1598]]
+0.6820298098137925
+              precision    recall  f1-score   support
+
+           c     0.2903    0.4260    0.3453       169
+           p     0.3351    0.3736    0.3533       174
+
+   micro avg     0.3100    0.3994    0.3490       343
+   macro avg     0.3127    0.3998    0.3493       343
+weighted avg     0.3130    0.3994    0.3494       343
+
+EVAL:   micro_F1. 0.3490 |  macro_F1 0.3493 | BEST F1: 0.3603 70
+
+Epoch:   74 2023-02-07 13:38:07.436378
+[[70224     0    19]
+ [    1 21236     0]
+ [    7     0 21990]]
+0.9997311406961887
+              precision    recall  f1-score   support
+
+           c     0.9992    0.9992    0.9992      1237
+           p     0.9922    0.9969    0.9945      1271
+
+   micro avg     0.9956    0.9980    0.9968      2508
+   macro avg     0.9957    0.9980    0.9968      2508
+weighted avg     0.9956    0.9980    0.9968      2508
+
+TRAIN:  micro_F1. 0.9968 |  macro_F1 0.9968
+[[8357 1008 1037]
+ [ 502 2066  400]
+ [ 613  565 1849]]
+0.6840569930792612
+              precision    recall  f1-score   support
+
+           c     0.2885    0.4320    0.3460       169
+           p     0.2966    0.4023    0.3415       174
+
+   micro avg     0.2924    0.4169    0.3438       343
+   macro avg     0.2926    0.4171    0.3437       343
+weighted avg     0.2926    0.4169    0.3437       343
+
+EVAL:   micro_F1. 0.3438 |  macro_F1 0.3437 | BEST F1: 0.3603 70
+
+Epoch:   75 2023-02-07 13:40:51.677992
+[[70225     0    18]
+ [    0 21237     0]
+ [    8     0 21989]]
+0.9997413532088303
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9937    0.9969    0.9953      1271
+
+   micro avg     0.9968    0.9984    0.9976      2508
+   macro avg     0.9969    0.9984    0.9976      2508
+weighted avg     0.9968    0.9984    0.9976      2508
+
+TRAIN:  micro_F1. 0.9976 |  macro_F1 0.9976
+[[8216 1016 1170]
+ [ 505 2053  410]
+ [ 590  569 1868]]
+0.6773687290481876
+              precision    recall  f1-score   support
+
+           c     0.2857    0.4260    0.3420       169
+           p     0.2944    0.4195    0.3460       174
+
+   micro avg     0.2900    0.4227    0.3440       343
+   macro avg     0.2900    0.4228    0.3440       343
+weighted avg     0.2901    0.4227    0.3440       343
+
+EVAL:   micro_F1. 0.3440 |  macro_F1 0.3440 | BEST F1: 0.3603 70
+
+Epoch:   76 2023-02-07 13:43:36.399095
+[[70220     0    23]
+ [    1 21236     0]
+ [    3     0 21994]]
+0.9997311728437119
+              precision    recall  f1-score   support
+
+           c     0.9992    0.9992    0.9992      1237
+           p     0.9937    0.9969    0.9953      1271
+
+   micro avg     0.9964    0.9980    0.9972      2508
+   macro avg     0.9965    0.9980    0.9972      2508
+weighted avg     0.9964    0.9980    0.9972      2508
+
+TRAIN:  micro_F1. 0.9972 |  macro_F1 0.9972
+[[8510  889 1003]
+ [ 602 1870  496]
+ [ 644  442 1941]]
+0.6836217409006299
+              precision    recall  f1-score   support
+
+           c     0.2920    0.3905    0.3342       169
+           p     0.3264    0.4540    0.3798       174
+
+   micro avg     0.3098    0.4227    0.3576       343
+   macro avg     0.3092    0.4223    0.3570       343
+weighted avg     0.3095    0.4227    0.3573       343
+
+EVAL:   micro_F1. 0.3576 |  macro_F1 0.3570 | BEST F1: 0.3603 70
+
+Epoch:   77 2023-02-07 13:46:21.347567
+[[70221     0    22]
+ [    0 21237     0]
+ [    4     0 21993]]
+0.9997413854948007
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9937    0.9969    0.9953      1271
+
+   micro avg     0.9968    0.9984    0.9976      2508
+   macro avg     0.9969    0.9984    0.9976      2508
+weighted avg     0.9968    0.9984    0.9976      2508
+
+TRAIN:  micro_F1. 0.9976 |  macro_F1 0.9976
+[[8694  772  936]
+ [ 632 1879  457]
+ [ 693  463 1871]]
+0.6880610892139359
+              precision    recall  f1-score   support
+
+           c     0.3043    0.4142    0.3509       169
+           p     0.3149    0.4253    0.3619       174
+
+   micro avg     0.3097    0.4198    0.3564       343
+   macro avg     0.3096    0.4197    0.3564       343
+weighted avg     0.3097    0.4198    0.3564       343
+
+EVAL:   micro_F1. 0.3564 |  macro_F1 0.3564 | BEST F1: 0.3603 70
+
+Epoch:   78 2023-02-07 13:49:06.235821
+[[70219     0    24]
+ [    0 21237     0]
+ [    4     0 21993]]
+0.9997215007614432
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9953    0.9976    0.9965      1271
+
+   micro avg     0.9976    0.9988    0.9982      2508
+   macro avg     0.9976    0.9988    0.9982      2508
+weighted avg     0.9976    0.9988    0.9982      2508
+
+TRAIN:  micro_F1. 0.9982 |  macro_F1 0.9982
+[[8244 1001 1157]
+ [ 455 2033  480]
+ [ 581  484 1962]]
+0.685606974491121
+              precision    recall  f1-score   support
+
+           c     0.2675    0.3846    0.3155       169
+           p     0.3198    0.4540    0.3753       174
+
+   micro avg     0.2939    0.4198    0.3457       343
+   macro avg     0.2937    0.4193    0.3454       343
+weighted avg     0.2940    0.4198    0.3459       343
+
+EVAL:   micro_F1. 0.3457 |  macro_F1 0.3454 | BEST F1: 0.3603 70
+
+Epoch:   79 2023-02-07 13:51:51.029049
+[[70220     0    23]
+ [    0 21237     0]
+ [    3     0 21994]]
+0.9997413935641973
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9922    0.9969    0.9945      1271
+
+   micro avg     0.9960    0.9984    0.9972      2508
+   macro avg     0.9961    0.9984    0.9973      2508
+weighted avg     0.9960    0.9984    0.9972      2508
+
+TRAIN:  micro_F1. 0.9972 |  macro_F1 0.9973
+[[8175 1026 1201]
+ [ 519 2102  347]
+ [ 531  600 1896]]
+0.682290903809235
+              precision    recall  f1-score   support
+
+           c     0.2863    0.4438    0.3480       169
+           p     0.2863    0.4080    0.3365       174
+
+   micro avg     0.2863    0.4257    0.3423       343
+   macro avg     0.2863    0.4259    0.3423       343
+weighted avg     0.2863    0.4257    0.3422       343
+
+EVAL:   micro_F1. 0.3423 |  macro_F1 0.3423 | BEST F1: 0.3603 70
+
+Epoch:   80 2023-02-07 13:54:35.434222
+[[70223     0    20]
+ [    1 21236     0]
+ [    6     0 21991]]
+0.9997311487343286
+              precision    recall  f1-score   support
+
+           c     0.9992    0.9992    0.9992      1237
+           p     0.9922    0.9969    0.9945      1271
+
+   micro avg     0.9956    0.9980    0.9968      2508
+   macro avg     0.9957    0.9980    0.9968      2508
+weighted avg     0.9956    0.9980    0.9968      2508
+
+TRAIN:  micro_F1. 0.9968 |  macro_F1 0.9968
+[[8506  872 1024]
+ [ 597 2006  365]
+ [ 654  534 1839]]
+0.6869135945810297
+              precision    recall  f1-score   support
+
+           c     0.3049    0.4438    0.3614       169
+           p     0.3064    0.4138    0.3521       174
+
+   micro avg     0.3056    0.4286    0.3568       343
+   macro avg     0.3056    0.4288    0.3568       343
+weighted avg     0.3056    0.4286    0.3567       343
+
+EVAL:   micro_F1. 0.3568 |  macro_F1 0.3568 | BEST F1: 0.3603 70
+
+Epoch:   81 2023-02-07 13:57:19.576810
+[[70227     0    16]
+ [    0 21237     0]
+ [    9     0 21988]]
+0.9997512895174346
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9961    0.9976    0.9969      1271
+
+   micro avg     0.9980    0.9988    0.9984      2508
+   macro avg     0.9980    0.9988    0.9984      2508
+weighted avg     0.9980    0.9988    0.9984      2508
+
+TRAIN:  micro_F1. 0.9984 |  macro_F1 0.9984
+[[8328  953 1121]
+ [ 531 2018  419]
+ [ 601  507 1919]]
+0.6854823401583725
+              precision    recall  f1-score   support
+
+           c     0.2824    0.4260    0.3396       169
+           p     0.3071    0.4253    0.3566       174
+
+   micro avg     0.2944    0.4257    0.3480       343
+   macro avg     0.2947    0.4257    0.3481       343
+weighted avg     0.2949    0.4257    0.3482       343
+
+EVAL:   micro_F1. 0.3480 |  macro_F1 0.3481 | BEST F1: 0.3603 70
+
+Epoch:   82 2023-02-07 14:00:14.543552
+[[70228     0    15]
+ [    0 21237     0]
+ [   10     0 21987]]
+0.9997512817531583
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9976    0.9976    0.9976      1271
+
+   micro avg     0.9988    0.9988    0.9988      2508
+   macro avg     0.9988    0.9988    0.9988      2508
+weighted avg     0.9988    0.9988    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8454  876 1072]
+ [ 593 1817  558]
+ [ 630  422 1975]]
+0.6783578369349706
+              precision    recall  f1-score   support
+
+           c     0.2763    0.3728    0.3174       169
+           p     0.3137    0.4598    0.3730       174
+
+   micro avg     0.2961    0.4169    0.3462       343
+   macro avg     0.2950    0.4163    0.3452       343
+weighted avg     0.2953    0.4169    0.3456       343
+
+EVAL:   micro_F1. 0.3462 |  macro_F1 0.3452 | BEST F1: 0.3603 70
+
+Epoch:   83 2023-02-07 14:03:01.880009
+[[70228     0    15]
+ [    0 21237     0]
+ [   10     0 21987]]
+0.9997512817531583
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9976    0.9976    0.9976      1271
+
+   micro avg     0.9988    0.9988    0.9988      2508
+   macro avg     0.9988    0.9988    0.9988      2508
+weighted avg     0.9988    0.9988    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8321  930 1151]
+ [ 576 1901  491]
+ [ 644  455 1928]]
+0.6756390990016844
+              precision    recall  f1-score   support
+
+           c     0.2887    0.4083    0.3382       169
+           p     0.3027    0.4540    0.3632       174
+
+   micro avg     0.2960    0.4315    0.3511       343
+   macro avg     0.2957    0.4312    0.3507       343
+weighted avg     0.2958    0.4315    0.3509       343
+
+EVAL:   micro_F1. 0.3511 |  macro_F1 0.3507 | BEST F1: 0.3603 70
+
+Epoch:   84 2023-02-07 14:05:46.324903
+[[70229     0    14]
+ [    0 21237     0]
+ [   11     0 21986]]
+0.9997512739880753
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9976    0.9976    0.9976      1271
+
+   micro avg     0.9988    0.9988    0.9988      2508
+   macro avg     0.9988    0.9988    0.9988      2508
+weighted avg     0.9988    0.9988    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8234 1002 1166]
+ [ 536 1994  438]
+ [ 597  509 1921]]
+0.6785016232861052
+              precision    recall  f1-score   support
+
+           c     0.2892    0.4260    0.3445       169
+           p     0.2962    0.4425    0.3548       174
+
+   micro avg     0.2927    0.4344    0.3498       343
+   macro avg     0.2927    0.4343    0.3497       343
+weighted avg     0.2927    0.4344    0.3497       343
+
+EVAL:   micro_F1. 0.3498 |  macro_F1 0.3497 | BEST F1: 0.3603 70
+
+Epoch:   85 2023-02-07 14:08:30.935194
+[[70227     0    16]
+ [    0 21237     0]
+ [    9     0 21988]]
+0.9997512895174346
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9976    0.9976    0.9976      1271
+
+   micro avg     0.9988    0.9988    0.9988      2508
+   macro avg     0.9988    0.9988    0.9988      2508
+weighted avg     0.9988    0.9988    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8344  981 1077]
+ [ 575 2008  385]
+ [ 602  535 1890]]
+0.6829339136259636
+              precision    recall  f1-score   support
+
+           c     0.2786    0.4320    0.3387       169
+           p     0.3077    0.4368    0.3610       174
+
+   micro avg     0.2927    0.4344    0.3498       343
+   macro avg     0.2932    0.4344    0.3499       343
+weighted avg     0.2934    0.4344    0.3501       343
+
+EVAL:   micro_F1. 0.3498 |  macro_F1 0.3499 | BEST F1: 0.3603 70
+
+Epoch:   86 2023-02-07 14:11:15.278916
+[[70229     0    14]
+ [    0 21237     0]
+ [   11     0 21986]]
+0.9997512739880753
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9953    0.9969    0.9961      1271
+
+   micro avg     0.9976    0.9984    0.9980      2508
+   macro avg     0.9976    0.9984    0.9980      2508
+weighted avg     0.9976    0.9984    0.9980      2508
+
+TRAIN:  micro_F1. 0.9980 |  macro_F1 0.9980
+[[8174  984 1244]
+ [ 552 1990  426]
+ [ 544  490 1993]]
+0.6818748722608778
+              precision    recall  f1-score   support
+
+           c     0.2760    0.4083    0.3294       169
+           p     0.2868    0.4368    0.3462       174
+
+   micro avg     0.2816    0.4227    0.3380       343
+   macro avg     0.2814    0.4225    0.3378       343
+weighted avg     0.2815    0.4227    0.3379       343
+
+EVAL:   micro_F1. 0.3380 |  macro_F1 0.3378 | BEST F1: 0.3603 70
+
+Epoch:   87 2023-02-07 14:14:05.275976
+[[70229     0    14]
+ [    0 21237     0]
+ [   13     0 21984]]
+0.9997313675199601
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9945    0.9961    0.9953      1271
+
+   micro avg     0.9972    0.9980    0.9976      2508
+   macro avg     0.9973    0.9980    0.9976      2508
+weighted avg     0.9972    0.9980    0.9976      2508
+
+TRAIN:  micro_F1. 0.9976 |  macro_F1 0.9976
+[[8470 1062  870]
+ [ 585 2088  295]
+ [ 675  659 1693]]
+0.6776698000492928
+              precision    recall  f1-score   support
+
+           c     0.2599    0.4260    0.3229       169
+           p     0.3116    0.3851    0.3445       174
+
+   micro avg     0.2825    0.4052    0.3329       343
+   macro avg     0.2858    0.4055    0.3337       343
+weighted avg     0.2862    0.4052    0.3338       343
+
+EVAL:   micro_F1. 0.3329 |  macro_F1 0.3337 | BEST F1: 0.3603 70
+
+Epoch:   88 2023-02-07 14:17:07.185745
+[[70227     0    16]
+ [    0 21237     0]
+ [    9     0 21988]]
+0.9997512895174346
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9961    0.9976    0.9969      1271
+
+   micro avg     0.9980    0.9988    0.9984      2508
+   macro avg     0.9980    0.9988    0.9984      2508
+weighted avg     0.9980    0.9988    0.9984      2508
+
+TRAIN:  micro_F1. 0.9984 |  macro_F1 0.9984
+[[8469  891 1042]
+ [ 599 1952  417]
+ [ 596  482 1949]]
+0.6900786899615903
+              precision    recall  f1-score   support
+
+           c     0.2677    0.4024    0.3215       169
+           p     0.3043    0.4425    0.3607       174
+
+   micro avg     0.2860    0.4227    0.3412       343
+   macro avg     0.2860    0.4224    0.3411       343
+weighted avg     0.2863    0.4227    0.3414       343
+
+EVAL:   micro_F1. 0.3412 |  macro_F1 0.3411 | BEST F1: 0.3603 70
+
+Epoch:   89 2023-02-07 14:19:58.839732
+[[70227     0    16]
+ [    0 21237     0]
+ [    9     0 21988]]
+0.9997512895174346
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9961    0.9976    0.9969      1271
+
+   micro avg     0.9980    0.9988    0.9984      2508
+   macro avg     0.9980    0.9988    0.9984      2508
+weighted avg     0.9980    0.9988    0.9984      2508
+
+TRAIN:  micro_F1. 0.9984 |  macro_F1 0.9984
+[[8439  963 1000]
+ [ 560 2077  331]
+ [ 619  606 1802]]
+0.6853945218172615
+              precision    recall  f1-score   support
+
+           c     0.2772    0.4379    0.3394       169
+           p     0.3097    0.4023    0.3500       174
+
+   micro avg     0.2921    0.4198    0.3445       343
+   macro avg     0.2934    0.4201    0.3447       343
+weighted avg     0.2937    0.4198    0.3448       343
+
+EVAL:   micro_F1. 0.3445 |  macro_F1 0.3447 | BEST F1: 0.3603 70
+
+Epoch:   90 2023-02-07 14:22:55.192658
+[[70227     0    16]
+ [    0 21237     0]
+ [    9     0 21988]]
+0.9997512895174346
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9976    0.9976    0.9976      1271
+
+   micro avg     0.9988    0.9988    0.9988      2508
+   macro avg     0.9988    0.9988    0.9988      2508
+weighted avg     0.9988    0.9988    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[7920 1185 1297]
+ [ 451 2150  367]
+ [ 514  685 1828]]
+0.6658137924272174
+              precision    recall  f1-score   support
+
+           c     0.2904    0.4675    0.3583       169
+           p     0.2816    0.3966    0.3294       174
+
+   micro avg     0.2863    0.4315    0.3442       343
+   macro avg     0.2860    0.4320    0.3438       343
+weighted avg     0.2860    0.4315    0.3436       343
+
+EVAL:   micro_F1. 0.3442 |  macro_F1 0.3438 | BEST F1: 0.3603 70
+
+Epoch:   91 2023-02-07 14:25:42.197482
+[[70227     0    16]
+ [    0 21237     0]
+ [    9     0 21988]]
+0.9997512895174346
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9976    0.9976    0.9976      1271
+
+   micro avg     0.9988    0.9988    0.9988      2508
+   macro avg     0.9988    0.9988    0.9988      2508
+weighted avg     0.9988    0.9988    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8721  798  883]
+ [ 624 1966  378]
+ [ 681  576 1770]]
+0.6871715990683404
+              precision    recall  f1-score   support
+
+           c     0.2806    0.4201    0.3365       169
+           p     0.3067    0.3966    0.3459       174
+
+   micro avg     0.2929    0.4082    0.3410       343
+   macro avg     0.2936    0.4083    0.3412       343
+weighted avg     0.2938    0.4082    0.3412       343
+
+EVAL:   micro_F1. 0.3410 |  macro_F1 0.3412 | BEST F1: 0.3603 70
+
+Epoch:   92 2023-02-07 14:28:27.801222
+[[70236     0     7]
+ [    0 21237     0]
+ [   19     0 21978]]
+0.9997412643531964
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9929    0.9961    0.9945      1271
+
+   micro avg     0.9964    0.9980    0.9972      2508
+   macro avg     0.9965    0.9980    0.9973      2508
+weighted avg     0.9964    0.9980    0.9972      2508
+
+TRAIN:  micro_F1. 0.9972 |  macro_F1 0.9973
+[[8589  754 1059]
+ [ 632 1831  505]
+ [ 672  388 1967]]
+0.6875626437354018
+              precision    recall  f1-score   support
+
+           c     0.2812    0.3728    0.3206       169
+           p     0.2928    0.4425    0.3524       174
+
+   micro avg     0.2875    0.4082    0.3373       343
+   macro avg     0.2870    0.4077    0.3365       343
+weighted avg     0.2871    0.4082    0.3367       343
+
+EVAL:   micro_F1. 0.3373 |  macro_F1 0.3365 | BEST F1: 0.3603 70
+
+Epoch:   93 2023-02-07 14:31:56.434115
+[[70226     0    17]
+ [    0 21237     0]
+ [    8     0 21989]]
+0.9997512972809043
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9976    0.9976    0.9976      1271
+
+   micro avg     0.9988    0.9988    0.9988      2508
+   macro avg     0.9988    0.9988    0.9988      2508
+weighted avg     0.9988    0.9988    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8465  805 1132]
+ [ 639 1839  490]
+ [ 683  459 1885]]
+0.6737961341129238
+              precision    recall  f1-score   support
+
+           c     0.2844    0.3787    0.3249       169
+           p     0.2934    0.4368    0.3510       174
+
+   micro avg     0.2893    0.4082    0.3386       343
+   macro avg     0.2889    0.4077    0.3380       343
+weighted avg     0.2890    0.4082    0.3381       343
+
+EVAL:   micro_F1. 0.3386 |  macro_F1 0.3380 | BEST F1: 0.3603 70
+
+Epoch:   94 2023-02-07 14:35:24.346616
+[[70219     0    24]
+ [    0 21237     0]
+ [    1     0 21996]]
+0.9997513516026162
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9961    0.9976    0.9969      1271
+
+   micro avg     0.9980    0.9988    0.9984      2508
+   macro avg     0.9980    0.9988    0.9984      2508
+weighted avg     0.9980    0.9988    0.9984      2508
+
+TRAIN:  micro_F1. 0.9984 |  macro_F1 0.9984
+[[8640  790  972]
+ [ 637 1866  465]
+ [ 694  478 1855]]
+0.6823007948946214
+              precision    recall  f1-score   support
+
+           c     0.2926    0.3964    0.3367       169
+           p     0.3020    0.4253    0.3532       174
+
+   micro avg     0.2975    0.4111    0.3452       343
+   macro avg     0.2973    0.4109    0.3450       343
+weighted avg     0.2974    0.4111    0.3451       343
+
+EVAL:   micro_F1. 0.3452 |  macro_F1 0.3450 | BEST F1: 0.3603 70
+
+Epoch:   95 2023-02-07 14:39:21.911184
+[[70222     0    21]
+ [    0 21237     0]
+ [    4     0 21993]]
+0.9997513283267193
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9953    0.9969    0.9961      1271
+
+   micro avg     0.9976    0.9984    0.9980      2508
+   macro avg     0.9976    0.9984    0.9980      2508
+weighted avg     0.9976    0.9984    0.9980      2508
+
+TRAIN:  micro_F1. 0.9980 |  macro_F1 0.9980
+[[8230 1040 1132]
+ [ 524 2042  402]
+ [ 594  589 1844]]
+0.6747902540391882
+              precision    recall  f1-score   support
+
+           c     0.2879    0.4379    0.3474       169
+           p     0.3058    0.4253    0.3558       174
+
+   micro avg     0.2966    0.4315    0.3515       343
+   macro avg     0.2969    0.4316    0.3516       343
+weighted avg     0.2970    0.4315    0.3517       343
+
+EVAL:   micro_F1. 0.3515 |  macro_F1 0.3516 | BEST F1: 0.3603 70
+
+Epoch:   96 2023-02-07 14:43:24.039008
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9961    0.9976    0.9969      1271
+
+   micro avg     0.9980    0.9988    0.9984      2508
+   macro avg     0.9980    0.9988    0.9984      2508
+weighted avg     0.9980    0.9988    0.9984      2508
+
+TRAIN:  micro_F1. 0.9984 |  macro_F1 0.9984
+[[8725  729  948]
+ [ 666 1820  482]
+ [ 728  432 1867]]
+0.6842216823960688
+              precision    recall  f1-score   support
+
+           c     0.2882    0.3905    0.3317       169
+           p     0.2885    0.4195    0.3419       174
+
+   micro avg     0.2884    0.4052    0.3370       343
+   macro avg     0.2884    0.4050    0.3368       343
+weighted avg     0.2884    0.4052    0.3369       343
+
+EVAL:   micro_F1. 0.3370 |  macro_F1 0.3368 | BEST F1: 0.3603 70
+
+Epoch:   97 2023-02-07 14:46:15.868080
+[[70229     0    14]
+ [    0 21237     0]
+ [   11     0 21986]]
+0.9997512739880753
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9953    0.9969    0.9961      1271
+
+   micro avg     0.9976    0.9984    0.9980      2508
+   macro avg     0.9976    0.9984    0.9980      2508
+weighted avg     0.9976    0.9984    0.9980      2508
+
+TRAIN:  micro_F1. 0.9980 |  macro_F1 0.9980
+[[8680  819  903]
+ [ 657 1852  459]
+ [ 688  413 1926]]
+0.6906203038743118
+              precision    recall  f1-score   support
+
+           c     0.3073    0.3964    0.3463       169
+           p     0.3276    0.4368    0.3744       174
+
+   micro avg     0.3178    0.4169    0.3607       343
+   macro avg     0.3175    0.4166    0.3603       343
+weighted avg     0.3176    0.4169    0.3605       343
+
+EVAL:   micro_F1. 0.3607 |  macro_F1 0.3603 | BEST F1: 0.3603 70
+[[16690  1553  1982]
+ [ 1691  3450   918]
+ [ 1504   801  4057]]
+0.6743522361217266
+              precision    recall  f1-score   support
+
+           c     0.2880    0.3531    0.3173       354
+           p     0.2787    0.3875    0.3242       351
+
+   micro avg     0.2831    0.3702    0.3208       705
+   macro avg     0.2834    0.3703    0.3207       705
+weighted avg     0.2834    0.3702    0.3207       705
+
+TEST:   micro_F1. 0.3208 |  macro_F1 0.3207
+
+Epoch:   98 2023-02-07 14:49:25.799318
+[[70229     0    14]
+ [    0 21237     0]
+ [   11     0 21986]]
+0.9997512739880753
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9953    0.9969    0.9961      1271
+
+   micro avg     0.9976    0.9984    0.9980      2508
+   macro avg     0.9976    0.9984    0.9980      2508
+weighted avg     0.9976    0.9984    0.9980      2508
+
+TRAIN:  micro_F1. 0.9980 |  macro_F1 0.9980
+[[8118  987 1297]
+ [ 514 2001  453]
+ [ 546  458 2023]]
+0.6827203659130484
+              precision    recall  f1-score   support
+
+           c     0.2874    0.4201    0.3413       169
+           p     0.2915    0.4540    0.3551       174
+
+   micro avg     0.2896    0.4373    0.3484       343
+   macro avg     0.2895    0.4371    0.3482       343
+weighted avg     0.2895    0.4373    0.3483       343
+
+EVAL:   micro_F1. 0.3484 |  macro_F1 0.3482 | BEST F1: 0.3607 97
+
+Epoch:   99 2023-02-07 14:52:19.118314
+[[70225     0    18]
+ [    0 21237     0]
+ [    7     0 21990]]
+0.9997513050435676
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9945    0.9976    0.9961      1271
+
+   micro avg     0.9972    0.9988    0.9980      2508
+   macro avg     0.9973    0.9988    0.9980      2508
+weighted avg     0.9972    0.9988    0.9980      2508
+
+TRAIN:  micro_F1. 0.9980 |  macro_F1 0.9980
+[[8698  832  872]
+ [ 632 1942  394]
+ [ 675  510 1842]]
+0.6913942633892433
+              precision    recall  f1-score   support
+
+           c     0.2988    0.4260    0.3512       169
+           p     0.3136    0.3966    0.3503       174
+
+   micro avg     0.3059    0.4111    0.3507       343
+   macro avg     0.3062    0.4113    0.3507       343
+weighted avg     0.3063    0.4111    0.3507       343
+
+EVAL:   micro_F1. 0.3507 |  macro_F1 0.3507 | BEST F1: 0.3607 97
+
+Epoch:  100 2023-02-07 14:55:19.509139
+[[70238     0     5]
+ [    5 21232     0]
+ [   20     0 21977]]
+0.9997000999754656
+              precision    recall  f1-score   support
+
+           c     0.9992    0.9992    0.9992      1237
+           p     0.9969    0.9969    0.9969      1271
+
+   micro avg     0.9980    0.9980    0.9980      2508
+   macro avg     0.9980    0.9980    0.9980      2508
+weighted avg     0.9980    0.9980    0.9980      2508
+
+TRAIN:  micro_F1. 0.9980 |  macro_F1 0.9980
+[[8482  840 1080]
+ [ 613 1819  536]
+ [ 605  448 1974]]
+0.679796290551085
+              precision    recall  f1-score   support
+
+           c     0.2991    0.3964    0.3410       169
+           p     0.3089    0.4368    0.3619       174
+
+   micro avg     0.3043    0.4169    0.3518       343
+   macro avg     0.3040    0.4166    0.3514       343
+weighted avg     0.3041    0.4169    0.3516       343
+
+EVAL:   micro_F1. 0.3518 |  macro_F1 0.3514 | BEST F1: 0.3607 97
+
+Epoch:  101 2023-02-07 14:58:21.096145
+[[70231     0    12]
+ [    0 21237     0]
+ [   13     0 21984]]
+0.9997512584554884
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9969    0.9969      1271
+
+   micro avg     0.9984    0.9984    0.9984      2508
+   macro avg     0.9984    0.9984    0.9984      2508
+weighted avg     0.9984    0.9984    0.9984      2508
+
+TRAIN:  micro_F1. 0.9984 |  macro_F1 0.9984
+[[8452  903 1047]
+ [ 613 2006  349]
+ [ 619  510 1898]]
+0.6900900073302031
+              precision    recall  f1-score   support
+
+           c     0.2923    0.4497    0.3543       169
+           p     0.3128    0.4368    0.3645       174
+
+   micro avg     0.3022    0.4431    0.3593       343
+   macro avg     0.3025    0.4432    0.3594       343
+weighted avg     0.3027    0.4431    0.3595       343
+
+EVAL:   micro_F1. 0.3593 |  macro_F1 0.3594 | BEST F1: 0.3607 97
+
+Epoch:  102 2023-02-07 15:01:15.366199
+[[70226     0    17]
+ [    0 21237     0]
+ [    8     0 21989]]
+0.9997512972809043
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9945    0.9976    0.9961      1271
+
+   micro avg     0.9972    0.9988    0.9980      2508
+   macro avg     0.9973    0.9988    0.9980      2508
+weighted avg     0.9972    0.9988    0.9980      2508
+
+TRAIN:  micro_F1. 0.9980 |  macro_F1 0.9980
+[[8514  794 1094]
+ [ 611 1926  431]
+ [ 599  466 1962]]
+0.6914663180096777
+              precision    recall  f1-score   support
+
+           c     0.3084    0.4142    0.3535       169
+           p     0.3226    0.4598    0.3791       174
+
+   micro avg     0.3158    0.4373    0.3667       343
+   macro avg     0.3155    0.4370    0.3663       343
+weighted avg     0.3156    0.4373    0.3665       343
+
+EVAL:   micro_F1. 0.3667 |  macro_F1 0.3663 | BEST F1: 0.3607 97
+[[16456  1634  2135]
+ [ 1579  3590   890]
+ [ 1345   817  4200]]
+0.680877545826004
+              precision    recall  f1-score   support
+
+           c     0.2976    0.3842    0.3354       354
+           p     0.2824    0.4103    0.3345       351
+
+   micro avg     0.2896    0.3972    0.3349       705
+   macro avg     0.2900    0.3972    0.3349       705
+weighted avg     0.2900    0.3972    0.3349       705
+
+TEST:   micro_F1. 0.3349 |  macro_F1 0.3349
+
+Epoch:  103 2023-02-07 15:04:19.856204
+[[70243     0     0]
+ [    0 21237     0]
+ [   25     0 21972]]
+0.9997511651921475
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9984    0.9969    0.9976      1271
+
+   micro avg     0.9992    0.9984    0.9988      2508
+   macro avg     0.9992    0.9984    0.9988      2508
+weighted avg     0.9992    0.9984    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8697  759  946]
+ [ 636 1851  481]
+ [ 689  424 1914]]
+0.68985672617221
+              precision    recall  f1-score   support
+
+           c     0.2986    0.3905    0.3385       169
+           p     0.3319    0.4483    0.3814       174
+
+   micro avg     0.3158    0.4198    0.3605       343
+   macro avg     0.3153    0.4194    0.3599       343
+weighted avg     0.3155    0.4198    0.3603       343
+
+EVAL:   micro_F1. 0.3605 |  macro_F1 0.3599 | BEST F1: 0.3667 102
+
+Epoch:  104 2023-02-07 15:07:13.730677
+[[70222     0    21]
+ [    0 21237     0]
+ [    4     0 21993]]
+0.9997513283267193
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9961    0.9976    0.9969      1271
+
+   micro avg     0.9980    0.9988    0.9984      2508
+   macro avg     0.9980    0.9988    0.9984      2508
+weighted avg     0.9980    0.9988    0.9984      2508
+
+TRAIN:  micro_F1. 0.9984 |  macro_F1 0.9984
+[[8230  952 1220]
+ [ 573 1983  412]
+ [ 596  516 1915]]
+0.6772408366242942
+              precision    recall  f1-score   support
+
+           c     0.2937    0.4379    0.3515       169
+           p     0.3008    0.4425    0.3581       174
+
+   micro avg     0.2972    0.4402    0.3549       343
+   macro avg     0.2972    0.4402    0.3548       343
+weighted avg     0.2973    0.4402    0.3549       343
+
+EVAL:   micro_F1. 0.3549 |  macro_F1 0.3548 | BEST F1: 0.3667 102
+
+Epoch:  105 2023-02-07 15:10:14.888348
+[[70240     0     3]
+ [    0 21237     0]
+ [   22     0 21975]]
+0.9997511885188878
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9969    0.9969      1271
+
+   micro avg     0.9984    0.9984    0.9984      2508
+   macro avg     0.9984    0.9984    0.9984      2508
+weighted avg     0.9984    0.9984    0.9984      2508
+
+TRAIN:  micro_F1. 0.9984 |  macro_F1 0.9984
+[[8369  889 1144]
+ [ 598 1967  403]
+ [ 580  493 1954]]
+0.6868184939593435
+              precision    recall  f1-score   support
+
+           c     0.3080    0.4320    0.3596       169
+           p     0.3180    0.4368    0.3680       174
+
+   micro avg     0.3130    0.4344    0.3639       343
+   macro avg     0.3130    0.4344    0.3638       343
+weighted avg     0.3131    0.4344    0.3639       343
+
+EVAL:   micro_F1. 0.3639 |  macro_F1 0.3638 | BEST F1: 0.3667 102
+
+Epoch:  106 2023-02-07 15:13:08.997761
+[[70243     0     0]
+ [    0 21237     0]
+ [   25     0 21972]]
+0.9997511651921475
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9984    0.9969    0.9976      1271
+
+   micro avg     0.9992    0.9984    0.9988      2508
+   macro avg     0.9992    0.9984    0.9988      2508
+weighted avg     0.9992    0.9984    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8375  885 1142]
+ [ 575 1911  482]
+ [ 600  471 1956]]
+0.681535101022637
+              precision    recall  f1-score   support
+
+           c     0.2794    0.4083    0.3317       169
+           p     0.2852    0.4425    0.3468       174
+
+   micro avg     0.2824    0.4257    0.3395       343
+   macro avg     0.2823    0.4254    0.3393       343
+weighted avg     0.2823    0.4257    0.3394       343
+
+EVAL:   micro_F1. 0.3395 |  macro_F1 0.3393 | BEST F1: 0.3667 102
+
+Epoch:  107 2023-02-07 15:15:54.083450
+[[70243     0     0]
+ [    0 21237     0]
+ [   25     0 21972]]
+0.9997511651921475
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9984    0.9969    0.9976      1271
+
+   micro avg     0.9992    0.9984    0.9988      2508
+   macro avg     0.9992    0.9984    0.9988      2508
+weighted avg     0.9992    0.9984    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8139 1043 1220]
+ [ 532 2009  427]
+ [ 593  557 1877]]
+0.6705606962210116
+              precision    recall  f1-score   support
+
+           c     0.2672    0.4142    0.3248       169
+           p     0.2930    0.4310    0.3488       174
+
+   micro avg     0.2799    0.4227    0.3368       343
+   macro avg     0.2801    0.4226    0.3368       343
+weighted avg     0.2803    0.4227    0.3370       343
+
+EVAL:   micro_F1. 0.3368 |  macro_F1 0.3368 | BEST F1: 0.3667 102
+
+Epoch:  108 2023-02-07 15:18:38.947698
+[[70223     0    20]
+ [    0 21237     0]
+ [    6     0 21991]]
+0.9997413693534924
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9945    0.9969    0.9957      1271
+
+   micro avg     0.9972    0.9984    0.9978      2508
+   macro avg     0.9973    0.9984    0.9978      2508
+weighted avg     0.9972    0.9984    0.9978      2508
+
+TRAIN:  micro_F1. 0.9978 |  macro_F1 0.9978
+[[8468  721 1213]
+ [ 611 1693  664]
+ [ 617  339 2071]]
+0.6761202029519519
+              precision    recall  f1-score   support
+
+           c     0.3039    0.3669    0.3324       169
+           p     0.2727    0.4655    0.3439       174
+
+   micro avg     0.2854    0.4169    0.3389       343
+   macro avg     0.2883    0.4162    0.3382       343
+weighted avg     0.2881    0.4169    0.3383       343
+
+EVAL:   micro_F1. 0.3389 |  macro_F1 0.3382 | BEST F1: 0.3667 102
+
+Epoch:  109 2023-02-07 15:21:32.344291
+[[70226     0    17]
+ [    0 21237     0]
+ [    8     0 21989]]
+0.9997512972809043
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9961    0.9976    0.9969      1271
+
+   micro avg     0.9980    0.9988    0.9984      2508
+   macro avg     0.9980    0.9988    0.9984      2508
+weighted avg     0.9980    0.9988    0.9984      2508
+
+TRAIN:  micro_F1. 0.9984 |  macro_F1 0.9984
+[[8146 1081 1175]
+ [ 510 2081  377]
+ [ 563  644 1820]]
+0.6711939190331995
+              precision    recall  f1-score   support
+
+           c     0.2917    0.4556    0.3557       169
+           p     0.2910    0.4080    0.3397       174
+
+   micro avg     0.2913    0.4315    0.3478       343
+   macro avg     0.2913    0.4318    0.3477       343
+weighted avg     0.2913    0.4315    0.3476       343
+
+EVAL:   micro_F1. 0.3478 |  macro_F1 0.3477 | BEST F1: 0.3667 102
+
+Epoch:  110 2023-02-07 15:24:23.877697
+[[70226     0    17]
+ [    0 21237     0]
+ [    8     0 21989]]
+0.9997512972809043
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9976    0.9976    0.9976      1271
+
+   micro avg     0.9988    0.9988    0.9988      2508
+   macro avg     0.9988    0.9988    0.9988      2508
+weighted avg     0.9988    0.9988    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8186 1096 1120]
+ [ 520 2058  390]
+ [ 543  603 1881]]
+0.6771155954470527
+              precision    recall  f1-score   support
+
+           c     0.2953    0.4438    0.3546       169
+           p     0.2846    0.4023    0.3333       174
+
+   micro avg     0.2900    0.4227    0.3440       343
+   macro avg     0.2899    0.4230    0.3440       343
+weighted avg     0.2898    0.4227    0.3438       343
+
+EVAL:   micro_F1. 0.3440 |  macro_F1 0.3440 | BEST F1: 0.3667 102
+
+Epoch:  111 2023-02-07 15:27:08.599366
+[[70224     0    19]
+ [    0 21237     0]
+ [    6     0 21991]]
+0.9997513128054244
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9961    0.9976    0.9969      1271
+
+   micro avg     0.9980    0.9988    0.9984      2508
+   macro avg     0.9980    0.9988    0.9984      2508
+weighted avg     0.9980    0.9988    0.9984      2508
+
+TRAIN:  micro_F1. 0.9984 |  macro_F1 0.9984
+[[8207 1121 1074]
+ [ 509 2113  346]
+ [ 553  681 1793]]
+0.6743607545923601
+              precision    recall  f1-score   support
+
+           c     0.2804    0.4497    0.3455       169
+           p     0.2792    0.3851    0.3237       174
+
+   micro avg     0.2798    0.4169    0.3349       343
+   macro avg     0.2798    0.4174    0.3346       343
+weighted avg     0.2798    0.4169    0.3344       343
+
+EVAL:   micro_F1. 0.3349 |  macro_F1 0.3346 | BEST F1: 0.3667 102
+
+Epoch:  112 2023-02-07 15:29:54.111125
+[[70218     0    25]
+ [    0 21237     0]
+ [    0     0 21997]]
+0.9997513593596367
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8336  935 1131]
+ [ 511 2010  447]
+ [ 574  473 1980]]
+0.6906373369694991
+              precision    recall  f1-score   support
+
+           c     0.2975    0.4260    0.3504       169
+           p     0.3135    0.4540    0.3709       174
+
+   micro avg     0.3057    0.4402    0.3608       343
+   macro avg     0.3055    0.4400    0.3606       343
+weighted avg     0.3056    0.4402    0.3608       343
+
+EVAL:   micro_F1. 0.3608 |  macro_F1 0.3606 | BEST F1: 0.3667 102
+
+Epoch:  113 2023-02-07 15:32:38.828352
+[[70226     0    17]
+ [    0 21237     0]
+ [    8     0 21989]]
+0.9997512972809043
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9961    0.9976    0.9969      1271
+
+   micro avg     0.9980    0.9988    0.9984      2508
+   macro avg     0.9980    0.9988    0.9984      2508
+weighted avg     0.9980    0.9988    0.9984      2508
+
+TRAIN:  micro_F1. 0.9984 |  macro_F1 0.9984
+[[8093 1169 1140]
+ [ 426 2208  334]
+ [ 528  672 1827]]
+0.679663426446164
+              precision    recall  f1-score   support
+
+           c     0.2801    0.4675    0.3503       169
+           p     0.3080    0.4195    0.3552       174
+
+   micro avg     0.2929    0.4431    0.3527       343
+   macro avg     0.2941    0.4435    0.3528       343
+weighted avg     0.2943    0.4431    0.3528       343
+
+EVAL:   micro_F1. 0.3527 |  macro_F1 0.3528 | BEST F1: 0.3667 102
+
+Epoch:  114 2023-02-07 15:35:23.741058
+[[70219     0    24]
+ [    0 21237     0]
+ [    1     0 21996]]
+0.9997513516026162
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9945    0.9976    0.9961      1271
+
+   micro avg     0.9972    0.9988    0.9980      2508
+   macro avg     0.9973    0.9988    0.9980      2508
+weighted avg     0.9972    0.9988    0.9980      2508
+
+TRAIN:  micro_F1. 0.9980 |  macro_F1 0.9980
+[[8847  740  815]
+ [ 639 1943  386]
+ [ 737  548 1742]]
+0.6894502670579298
+              precision    recall  f1-score   support
+
+           c     0.3067    0.4083    0.3503       169
+           p     0.3302    0.4080    0.3650       174
+
+   micro avg     0.3182    0.4082    0.3576       343
+   macro avg     0.3184    0.4082    0.3576       343
+weighted avg     0.3186    0.4082    0.3578       343
+
+EVAL:   micro_F1. 0.3576 |  macro_F1 0.3576 | BEST F1: 0.3667 102
+
+Epoch:  115 2023-02-07 15:38:08.425791
+[[70228     0    15]
+ [    0 21237     0]
+ [   10     0 21987]]
+0.9997512817531583
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9976    0.9976    0.9976      1271
+
+   micro avg     0.9988    0.9988    0.9988      2508
+   macro avg     0.9988    0.9988    0.9988      2508
+weighted avg     0.9988    0.9988    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8530  902  970]
+ [ 584 2023  361]
+ [ 618  593 1816]]
+0.6864671532145947
+              precision    recall  f1-score   support
+
+           c     0.3058    0.4379    0.3601       169
+           p     0.3130    0.4138    0.3564       174
+
+   micro avg     0.3093    0.4257    0.3583       343
+   macro avg     0.3094    0.4258    0.3583       343
+weighted avg     0.3095    0.4257    0.3582       343
+
+EVAL:   micro_F1. 0.3583 |  macro_F1 0.3583 | BEST F1: 0.3667 102
+
+Epoch:  116 2023-02-07 15:40:50.906960
+[[70211     0    32]
+ [    0 21237     0]
+ [   10     0 21987]]
+0.9995822641759902
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9976    0.9972      1271
+
+   micro avg     0.9984    0.9988    0.9986      2508
+   macro avg     0.9984    0.9988    0.9986      2508
+weighted avg     0.9984    0.9988    0.9986      2508
+
+TRAIN:  micro_F1. 0.9986 |  macro_F1 0.9986
+[[8636  728 1038]
+ [ 600 1937  431]
+ [ 671  441 1915]]
+0.6952238494535076
+              precision    recall  f1-score   support
+
+           c     0.3111    0.4142    0.3553       169
+           p     0.3224    0.4540    0.3771       174
+
+   micro avg     0.3170    0.4344    0.3665       343
+   macro avg     0.3168    0.4341    0.3662       343
+weighted avg     0.3169    0.4344    0.3664       343
+
+EVAL:   micro_F1. 0.3665 |  macro_F1 0.3662 | BEST F1: 0.3667 102
+
+Epoch:  117 2023-02-07 15:43:35.132661
+[[70228     0    15]
+ [    0 21237     0]
+ [   10     0 21987]]
+0.9997512817531583
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9976    0.9976    0.9976      1271
+
+   micro avg     0.9988    0.9988    0.9988      2508
+   macro avg     0.9988    0.9988    0.9988      2508
+weighted avg     0.9988    0.9988    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8587  851  964]
+ [ 543 1971  454]
+ [ 608  504 1915]]
+0.6937476379463026
+              precision    recall  f1-score   support
+
+           c     0.3057    0.4142    0.3518       169
+           p     0.3348    0.4368    0.3791       174
+
+   micro avg     0.3202    0.4257    0.3655       343
+   macro avg     0.3202    0.4255    0.3654       343
+weighted avg     0.3205    0.4257    0.3656       343
+
+EVAL:   micro_F1. 0.3655 |  macro_F1 0.3654 | BEST F1: 0.3667 102
+
+Epoch:  118 2023-02-07 15:46:19.909452
+[[70204     0    39]
+ [    0 21237     0]
+ [    5     0 21992]]
+0.9995624538910195
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9953    0.9976    0.9965      1271
+
+   micro avg     0.9976    0.9988    0.9982      2508
+   macro avg     0.9976    0.9988    0.9982      2508
+weighted avg     0.9976    0.9988    0.9982      2508
+
+TRAIN:  micro_F1. 0.9982 |  macro_F1 0.9982
+[[7897 1001 1504]
+ [ 412 2036  520]
+ [ 501  470 2056]]
+0.6765183877441808
+              precision    recall  f1-score   support
+
+           c     0.2738    0.4083    0.3278       169
+           p     0.2937    0.4828    0.3652       174
+
+   micro avg     0.2844    0.4461    0.3473       343
+   macro avg     0.2838    0.4455    0.3465       343
+weighted avg     0.2839    0.4461    0.3468       343
+
+EVAL:   micro_F1. 0.3473 |  macro_F1 0.3465 | BEST F1: 0.3667 102
+
+Epoch:  119 2023-02-07 15:49:04.041025
+[[70225     0    18]
+ [    0 21237     0]
+ [    7     0 21990]]
+0.9997513050435676
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9961    0.9976    0.9969      1271
+
+   micro avg     0.9980    0.9988    0.9984      2508
+   macro avg     0.9980    0.9988    0.9984      2508
+weighted avg     0.9980    0.9988    0.9984      2508
+
+TRAIN:  micro_F1. 0.9984 |  macro_F1 0.9984
+[[8393  948 1061]
+ [ 509 2016  443]
+ [ 627  554 1846]]
+0.6809359515382495
+              precision    recall  f1-score   support
+
+           c     0.2934    0.4201    0.3455       169
+           p     0.2840    0.4080    0.3349       174
+
+   micro avg     0.2886    0.4140    0.3401       343
+   macro avg     0.2887    0.4141    0.3402       343
+weighted avg     0.2886    0.4140    0.3401       343
+
+EVAL:   micro_F1. 0.3401 |  macro_F1 0.3402 | BEST F1: 0.3667 102
+
+Epoch:  120 2023-02-07 15:51:48.425392
+[[70233     0    10]
+ [    0 21237     0]
+ [   15     0 21982]]
+0.9997512429196735
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9961    0.9976    0.9969      1271
+
+   micro avg     0.9980    0.9988    0.9984      2508
+   macro avg     0.9980    0.9988    0.9984      2508
+weighted avg     0.9980    0.9988    0.9984      2508
+
+TRAIN:  micro_F1. 0.9984 |  macro_F1 0.9984
+[[8094 1059 1249]
+ [ 428 2105  435]
+ [ 542  531 1954]]
+0.6832659749430786
+              precision    recall  f1-score   support
+
+           c     0.2925    0.4379    0.3507       169
+           p     0.3167    0.4368    0.3671       174
+
+   micro avg     0.3043    0.4373    0.3589       343
+   macro avg     0.3046    0.4373    0.3589       343
+weighted avg     0.3048    0.4373    0.3591       343
+
+EVAL:   micro_F1. 0.3589 |  macro_F1 0.3589 | BEST F1: 0.3667 102
+
+Epoch:  121 2023-02-07 15:54:33.640784
+[[70242     0     1]
+ [    0 21237     0]
+ [   24     0 21973]]
+0.9997511729685357
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9984    0.9969    0.9976      1271
+
+   micro avg     0.9992    0.9984    0.9988      2508
+   macro avg     0.9992    0.9984    0.9988      2508
+weighted avg     0.9992    0.9984    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8391  943 1068]
+ [ 534 2014  420]
+ [ 623  519 1885]]
+0.6851143663589451
+              precision    recall  f1-score   support
+
+           c     0.2857    0.4142    0.3382       169
+           p     0.3074    0.4310    0.3589       174
+
+   micro avg     0.2965    0.4227    0.3486       343
+   macro avg     0.2965    0.4226    0.3485       343
+weighted avg     0.2967    0.4227    0.3487       343
+
+EVAL:   micro_F1. 0.3486 |  macro_F1 0.3485 | BEST F1: 0.3667 102
+
+Epoch:  122 2023-02-07 15:57:18.544392
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8572  830 1000]
+ [ 550 1976  442]
+ [ 654  494 1879]]
+0.6907132824727028
+              precision    recall  f1-score   support
+
+           c     0.3057    0.4142    0.3518       169
+           p     0.3291    0.4425    0.3775       174
+
+   micro avg     0.3175    0.4286    0.3648       343
+   macro avg     0.3174    0.4284    0.3646       343
+weighted avg     0.3175    0.4286    0.3648       343
+
+EVAL:   micro_F1. 0.3648 |  macro_F1 0.3646 | BEST F1: 0.3667 102
+
+Epoch:  123 2023-02-07 16:00:02.901598
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8597  782 1023]
+ [ 611 1888  469]
+ [ 657  455 1915]]
+0.687792287203162
+              precision    recall  f1-score   support
+
+           c     0.3053    0.4083    0.3494       169
+           p     0.3102    0.4368    0.3628       174
+
+   micro avg     0.3079    0.4227    0.3563       343
+   macro avg     0.3078    0.4225    0.3561       343
+weighted avg     0.3078    0.4227    0.3562       343
+
+EVAL:   micro_F1. 0.3563 |  macro_F1 0.3561 | BEST F1: 0.3667 102
+
+Epoch:  124 2023-02-07 16:02:47.072872
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8368  908 1126]
+ [ 536 1959  473]
+ [ 642  488 1897]]
+0.6800860478752538
+              precision    recall  f1-score   support
+
+           c     0.2815    0.3964    0.3292       169
+           p     0.3016    0.4368    0.3568       174
+
+   micro avg     0.2918    0.4169    0.3433       343
+   macro avg     0.2915    0.4166    0.3430       343
+weighted avg     0.2917    0.4169    0.3432       343
+
+EVAL:   micro_F1. 0.3433 |  macro_F1 0.3430 | BEST F1: 0.3667 102
+
+Epoch:  125 2023-02-07 16:05:45.514151
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8158  919 1325]
+ [ 511 1929  528]
+ [ 567  423 2037]]
+0.6793967208629356
+              precision    recall  f1-score   support
+
+           c     0.2857    0.3905    0.3300       169
+           p     0.2971    0.4713    0.3644       174
+
+   micro avg     0.2919    0.4315    0.3482       343
+   macro avg     0.2914    0.4309    0.3472       343
+weighted avg     0.2915    0.4315    0.3475       343
+
+EVAL:   micro_F1. 0.3482 |  macro_F1 0.3472 | BEST F1: 0.3667 102
+
+Epoch:  126 2023-02-07 16:08:46.289974
+[[70221     0    22]
+ [    0 21237     0]
+ [    3     0 21994]]
+0.9997513360861575
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8799  815  788]
+ [ 664 1902  402]
+ [ 809  507 1711]]
+0.6809385431450954
+              precision    recall  f1-score   support
+
+           c     0.2790    0.3846    0.3234       169
+           p     0.3682    0.4253    0.3947       174
+
+   micro avg     0.3203    0.4052    0.3578       343
+   macro avg     0.3236    0.4050    0.3590       343
+weighted avg     0.3242    0.4052    0.3595       343
+
+EVAL:   micro_F1. 0.3578 |  macro_F1 0.3590 | BEST F1: 0.3667 102
+
+Epoch:  127 2023-02-07 16:11:46.629297
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8384  896 1122]
+ [ 557 1979  432]
+ [ 617  464 1946]]
+0.6879763891876797
+              precision    recall  f1-score   support
+
+           c     0.3017    0.4142    0.3491       169
+           p     0.3024    0.4310    0.3555       174
+
+   micro avg     0.3021    0.4227    0.3524       343
+   macro avg     0.3021    0.4226    0.3523       343
+weighted avg     0.3021    0.4227    0.3523       343
+
+EVAL:   micro_F1. 0.3524 |  macro_F1 0.3523 | BEST F1: 0.3667 102
+
+Epoch:  128 2023-02-07 16:14:46.115544
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8292  872 1238]
+ [ 540 1986  442]
+ [ 580  472 1975]]
+0.686266911027499
+              precision    recall  f1-score   support
+
+           c     0.3090    0.4260    0.3582       169
+           p     0.3083    0.4483    0.3653       174
+
+   micro avg     0.3086    0.4373    0.3619       343
+   macro avg     0.3087    0.4372    0.3618       343
+weighted avg     0.3087    0.4373    0.3618       343
+
+EVAL:   micro_F1. 0.3619 |  macro_F1 0.3618 | BEST F1: 0.3667 102
+
+Epoch:  129 2023-02-07 16:17:46.570896
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[7886 1039 1477]
+ [ 418 2033  517]
+ [ 526  481 2020]]
+0.6724658822498016
+              precision    recall  f1-score   support
+
+           c     0.3099    0.4438    0.3650       169
+           p     0.2903    0.4655    0.3576       174
+
+   micro avg     0.2994    0.4548    0.3611       343
+   macro avg     0.3001    0.4547    0.3613       343
+weighted avg     0.3000    0.4548    0.3612       343
+
+EVAL:   micro_F1. 0.3611 |  macro_F1 0.3613 | BEST F1: 0.3667 102
+
+Epoch:  130 2023-02-07 16:20:46.691262
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8741  731  930]
+ [ 651 1898  419]
+ [ 705  450 1872]]
+0.6932677134052891
+              precision    recall  f1-score   support
+
+           c     0.3032    0.3964    0.3436       169
+           p     0.3275    0.4310    0.3722       174
+
+   micro avg     0.3156    0.4140    0.3581       343
+   macro avg     0.3153    0.4137    0.3579       343
+weighted avg     0.3155    0.4140    0.3581       343
+
+EVAL:   micro_F1. 0.3581 |  macro_F1 0.3579 | BEST F1: 0.3667 102
+
+Epoch:  131 2023-02-07 16:23:46.809391
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8250 1055 1097]
+ [ 485 2092  391]
+ [ 579  549 1899]]
+0.6856256928856753
+              precision    recall  f1-score   support
+
+           c     0.2984    0.4556    0.3607       169
+           p     0.3083    0.4253    0.3575       174
+
+   micro avg     0.3032    0.4402    0.3591       343
+   macro avg     0.3034    0.4405    0.3591       343
+weighted avg     0.3035    0.4402    0.3590       343
+
+EVAL:   micro_F1. 0.3591 |  macro_F1 0.3591 | BEST F1: 0.3667 102
+
+Epoch:  132 2023-02-07 16:26:46.889570
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8751  793  858]
+ [ 626 1955  387]
+ [ 703  463 1861]]
+0.698058560566413
+              precision    recall  f1-score   support
+
+           c     0.3060    0.4201    0.3541       169
+           p     0.3394    0.4310    0.3797       174
+
+   micro avg     0.3223    0.4257    0.3668       343
+   macro avg     0.3227    0.4256    0.3669       343
+weighted avg     0.3229    0.4257    0.3671       343
+
+EVAL:   micro_F1. 0.3668 |  macro_F1 0.3669 | BEST F1: 0.3667 102
+[[16650  1697  1878]
+ [ 1707  3548   804]
+ [ 1445  1049  3868]]
+0.6685021304074938
+              precision    recall  f1-score   support
+
+           c     0.2891    0.3757    0.3268       354
+           p     0.2959    0.3903    0.3366       351
+
+   micro avg     0.2925    0.3830    0.3317       705
+   macro avg     0.2925    0.3830    0.3317       705
+weighted avg     0.2925    0.3830    0.3317       705
+
+TEST:   micro_F1. 0.3317 |  macro_F1 0.3317
+
+Epoch:  133 2023-02-07 16:30:07.133851
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8561  896  945]
+ [ 551 2010  407]
+ [ 684  476 1867]]
+0.6928670554803148
+              precision    recall  f1-score   support
+
+           c     0.3042    0.4320    0.3570       169
+           p     0.3136    0.4253    0.3610       174
+
+   micro avg     0.3088    0.4286    0.3590       343
+   macro avg     0.3089    0.4286    0.3590       343
+weighted avg     0.3089    0.4286    0.3590       343
+
+EVAL:   micro_F1. 0.3590 |  macro_F1 0.3590 | BEST F1: 0.3668 132
+
+Epoch:  134 2023-02-07 16:33:07.778512
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8420  956 1026]
+ [ 526 2070  372]
+ [ 646  519 1862]]
+0.6900792785106189
+              precision    recall  f1-score   support
+
+           c     0.3017    0.4320    0.3552       169
+           p     0.3319    0.4310    0.3750       174
+
+   micro avg     0.3162    0.4315    0.3650       343
+   macro avg     0.3168    0.4315    0.3651       343
+weighted avg     0.3170    0.4315    0.3653       343
+
+EVAL:   micro_F1. 0.3650 |  macro_F1 0.3651 | BEST F1: 0.3668 132
+
+Epoch:  135 2023-02-07 16:36:08.119103
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8733  790  879]
+ [ 634 1946  388]
+ [ 695  455 1877]]
+0.6979162918976686
+              precision    recall  f1-score   support
+
+           c     0.3130    0.4260    0.3609       169
+           p     0.3425    0.4310    0.3817       174
+
+   micro avg     0.3274    0.4286    0.3712       343
+   macro avg     0.3278    0.4285    0.3713       343
+weighted avg     0.3280    0.4286    0.3714       343
+
+EVAL:   micro_F1. 0.3712 |  macro_F1 0.3713 | BEST F1: 0.3668 132
+[[16663  1663  1899]
+ [ 1735  3411   913]
+ [ 1493   993  3876]]
+0.6624522052966154
+              precision    recall  f1-score   support
+
+           c     0.2835    0.3588    0.3167       354
+           p     0.2894    0.3818    0.3292       351
+
+   micro avg     0.2865    0.3702    0.3230       705
+   macro avg     0.2864    0.3703    0.3230       705
+weighted avg     0.2864    0.3702    0.3229       705
+
+TEST:   micro_F1. 0.3230 |  macro_F1 0.3230
+
+Epoch:  136 2023-02-07 16:39:28.898483
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8777  768  857]
+ [ 658 1920  390]
+ [ 702  462 1863]]
+0.6964866219960019
+              precision    recall  f1-score   support
+
+           c     0.3170    0.4201    0.3613       169
+           p     0.3505    0.4310    0.3866       174
+
+   micro avg     0.3333    0.4257    0.3739       343
+   macro avg     0.3337    0.4256    0.3740       343
+weighted avg     0.3340    0.4257    0.3741       343
+
+EVAL:   micro_F1. 0.3739 |  macro_F1 0.3740 | BEST F1: 0.3712 135
+[[16752  1627  1846]
+ [ 1748  3413   898]
+ [ 1526   987  3849]]
+0.6637910890906267
+              precision    recall  f1-score   support
+
+           c     0.2864    0.3616    0.3196       354
+           p     0.2927    0.3761    0.3292       351
+
+   micro avg     0.2895    0.3688    0.3244       705
+   macro avg     0.2895    0.3688    0.3244       705
+weighted avg     0.2895    0.3688    0.3244       705
+
+TEST:   micro_F1. 0.3244 |  macro_F1 0.3244
+
+Epoch:  137 2023-02-07 16:42:49.868957
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8225  697 1480]
+ [ 541 1796  631]
+ [ 568  372 2087]]
+0.6756750366417451
+              precision    recall  f1-score   support
+
+           c     0.3119    0.3728    0.3396       169
+           p     0.2976    0.4943    0.3715       174
+
+   micro avg     0.3035    0.4344    0.3573       343
+   macro avg     0.3047    0.4335    0.3556       343
+weighted avg     0.3046    0.4344    0.3558       343
+
+EVAL:   micro_F1. 0.3573 |  macro_F1 0.3556 | BEST F1: 0.3739 136
+
+Epoch:  138 2023-02-07 16:45:50.419309
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8595  739 1068]
+ [ 619 1840  509]
+ [ 655  398 1974]]
+0.6890664891048139
+              precision    recall  f1-score   support
+
+           c     0.3059    0.3964    0.3454       169
+           p     0.3123    0.4540    0.3700       174
+
+   micro avg     0.3093    0.4257    0.3583       343
+   macro avg     0.3091    0.4252    0.3577       343
+weighted avg     0.3091    0.4257    0.3579       343
+
+EVAL:   micro_F1. 0.3583 |  macro_F1 0.3577 | BEST F1: 0.3739 136
+
+Epoch:  139 2023-02-07 16:48:51.041321
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8302  954 1146]
+ [ 521 2042  405]
+ [ 605  499 1923]]
+0.6869410588338706
+              precision    recall  f1-score   support
+
+           c     0.3036    0.4438    0.3606       169
+           p     0.3061    0.4310    0.3580       174
+
+   micro avg     0.3049    0.4373    0.3593       343
+   macro avg     0.3049    0.4374    0.3593       343
+weighted avg     0.3049    0.4373    0.3593       343
+
+EVAL:   micro_F1. 0.3593 |  macro_F1 0.3593 | BEST F1: 0.3739 136
+
+Epoch:  140 2023-02-07 16:51:50.667919
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8451  946 1005]
+ [ 611 1993  364]
+ [ 648  509 1870]]
+0.68617505134358
+              precision    recall  f1-score   support
+
+           c     0.2869    0.4260    0.3429       169
+           p     0.3162    0.4253    0.3627       174
+
+   micro avg     0.3010    0.4257    0.3527       343
+   macro avg     0.3015    0.4257    0.3528       343
+weighted avg     0.3018    0.4257    0.3529       343
+
+EVAL:   micro_F1. 0.3527 |  macro_F1 0.3528 | BEST F1: 0.3739 136
+
+Epoch:  141 2023-02-07 16:54:50.289240
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8435  821 1146]
+ [ 608 1880  480]
+ [ 622  418 1987]]
+0.6856291863258163
+              precision    recall  f1-score   support
+
+           c     0.3108    0.4083    0.3529       169
+           p     0.3133    0.4483    0.3688       174
+
+   micro avg     0.3121    0.4286    0.3612       343
+   macro avg     0.3120    0.4283    0.3609       343
+weighted avg     0.3120    0.4286    0.3610       343
+
+EVAL:   micro_F1. 0.3612 |  macro_F1 0.3609 | BEST F1: 0.3739 136
+
+Epoch:  142 2023-02-07 16:57:51.118652
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8517  791 1094]
+ [ 636 1876  456]
+ [ 655  419 1953]]
+0.6869226451568187
+              precision    recall  f1-score   support
+
+           c     0.2913    0.3964    0.3358       169
+           p     0.2964    0.4310    0.3513       174
+
+   micro avg     0.2940    0.4140    0.3438       343
+   macro avg     0.2939    0.4137    0.3436       343
+weighted avg     0.2939    0.4140    0.3437       343
+
+EVAL:   micro_F1. 0.3438 |  macro_F1 0.3436 | BEST F1: 0.3739 136
+
+Epoch:  143 2023-02-07 17:00:50.552311
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8448  912 1042]
+ [ 561 1999  408]
+ [ 606  484 1937]]
+0.6921312579343675
+              precision    recall  f1-score   support
+
+           c     0.3176    0.4379    0.3682       169
+           p     0.3451    0.4483    0.3900       174
+
+   micro avg     0.3312    0.4431    0.3791       343
+   macro avg     0.3314    0.4431    0.3791       343
+weighted avg     0.3316    0.4431    0.3792       343
+
+EVAL:   micro_F1. 0.3791 |  macro_F1 0.3791 | BEST F1: 0.3739 136
+[[16195  1923  2107]
+ [ 1548  3602   909]
+ [ 1286   977  4099]]
+0.6689852235228887
+              precision    recall  f1-score   support
+
+           c     0.2739    0.3729    0.3158       354
+           p     0.2984    0.4131    0.3465       351
+
+   micro avg     0.2862    0.3929    0.3311       705
+   macro avg     0.2861    0.3930    0.3311       705
+weighted avg     0.2861    0.3929    0.3311       705
+
+TEST:   micro_F1. 0.3311 |  macro_F1 0.3311
+
+Epoch:  144 2023-02-07 17:04:11.289893
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8492  883 1027]
+ [ 585 1967  416]
+ [ 641  478 1908]]
+0.6890943456909234
+              precision    recall  f1-score   support
+
+           c     0.2924    0.4083    0.3407       169
+           p     0.3391    0.4483    0.3861       174
+
+   micro avg     0.3155    0.4286    0.3634       343
+   macro avg     0.3158    0.4283    0.3634       343
+weighted avg     0.3161    0.4286    0.3638       343
+
+EVAL:   micro_F1. 0.3634 |  macro_F1 0.3634 | BEST F1: 0.3791 143
+
+Epoch:  145 2023-02-07 17:07:11.967634
+[[70218     0    25]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997314597308254
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9961    0.9984    0.9972      1271
+
+   micro avg     0.9980    0.9992    0.9986      2508
+   macro avg     0.9980    0.9992    0.9986      2508
+weighted avg     0.9980    0.9992    0.9986      2508
+
+TRAIN:  micro_F1. 0.9986 |  macro_F1 0.9986
+[[8652  787  963]
+ [ 623 1917  428]
+ [ 674  473 1880]]
+0.6904048135739095
+              precision    recall  f1-score   support
+
+           c     0.2876    0.3964    0.3333       169
+           p     0.3333    0.4368    0.3781       174
+
+   micro avg     0.3102    0.4169    0.3557       343
+   macro avg     0.3104    0.4166    0.3557       343
+weighted avg     0.3108    0.4169    0.3560       343
+
+EVAL:   micro_F1. 0.3557 |  macro_F1 0.3557 | BEST F1: 0.3791 143
+
+Epoch:  146 2023-02-07 17:10:12.047017
+[[70220     0    23]
+ [    0 21237     0]
+ [    3     0 21994]]
+0.9997413935641973
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9953    0.9976    0.9965      1271
+
+   micro avg     0.9976    0.9988    0.9982      2508
+   macro avg     0.9976    0.9988    0.9982      2508
+weighted avg     0.9976    0.9988    0.9982      2508
+
+TRAIN:  micro_F1. 0.9982 |  macro_F1 0.9982
+[[8344  897 1161]
+ [ 539 1978  451]
+ [ 592  492 1943]]
+0.6848095383825061
+              precision    recall  f1-score   support
+
+           c     0.3080    0.4320    0.3596       169
+           p     0.3077    0.4368    0.3610       174
+
+   micro avg     0.3079    0.4344    0.3603       343
+   macro avg     0.3079    0.4344    0.3603       343
+weighted avg     0.3079    0.4344    0.3603       343
+
+EVAL:   micro_F1. 0.3603 |  macro_F1 0.3603 | BEST F1: 0.3791 143
+
+Epoch:  147 2023-02-07 17:13:11.751259
+[[70219     0    24]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997414016327558
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9961    0.9984    0.9972      1271
+
+   micro avg     0.9980    0.9992    0.9986      2508
+   macro avg     0.9980    0.9992    0.9986      2508
+weighted avg     0.9980    0.9992    0.9986      2508
+
+TRAIN:  micro_F1. 0.9986 |  macro_F1 0.9986
+[[8239  983 1180]
+ [ 530 2033  405]
+ [ 576  526 1925]]
+0.6826628726316359
+              precision    recall  f1-score   support
+
+           c     0.2891    0.4379    0.3482       169
+           p     0.2948    0.4253    0.3482       174
+
+   micro avg     0.2919    0.4315    0.3482       343
+   macro avg     0.2919    0.4316    0.3482       343
+weighted avg     0.2920    0.4315    0.3482       343
+
+EVAL:   micro_F1. 0.3482 |  macro_F1 0.3482 | BEST F1: 0.3791 143
+
+Epoch:  148 2023-02-07 17:15:55.807185
+[[70219     0    24]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997414016327558
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9961    0.9984    0.9972      1271
+
+   micro avg     0.9980    0.9992    0.9986      2508
+   macro avg     0.9980    0.9992    0.9986      2508
+weighted avg     0.9980    0.9992    0.9986      2508
+
+TRAIN:  micro_F1. 0.9986 |  macro_F1 0.9986
+[[8324  864 1214]
+ [ 601 1900  467]
+ [ 589  402 2036]]
+0.6864015576391322
+              precision    recall  f1-score   support
+
+           c     0.2778    0.3846    0.3226       169
+           p     0.2981    0.4540    0.3599       174
+
+   micro avg     0.2886    0.4198    0.3420       343
+   macro avg     0.2879    0.4193    0.3412       343
+weighted avg     0.2881    0.4198    0.3415       343
+
+EVAL:   micro_F1. 0.3420 |  macro_F1 0.3412 | BEST F1: 0.3791 143
+
+Epoch:  149 2023-02-07 17:18:39.964093
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8389  900 1113]
+ [ 573 1993  402]
+ [ 600  495 1932]]
+0.6881285514932869
+              precision    recall  f1-score   support
+
+           c     0.2869    0.4142    0.3390       169
+           p     0.3049    0.4310    0.3571       174
+
+   micro avg     0.2959    0.4227    0.3481       343
+   macro avg     0.2959    0.4226    0.3481       343
+weighted avg     0.2960    0.4227    0.3482       343
+
+EVAL:   micro_F1. 0.3481 |  macro_F1 0.3481 | BEST F1: 0.3791 143
+
+Epoch:  150 2023-02-07 17:21:24.147788
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8398  885 1119]
+ [ 584 1970  414]
+ [ 597  490 1940]]
+0.6872102090100332
+              precision    recall  f1-score   support
+
+           c     0.2941    0.4142    0.3440       169
+           p     0.3043    0.4425    0.3607       174
+
+   micro avg     0.2994    0.4286    0.3525       343
+   macro avg     0.2992    0.4284    0.3523       343
+weighted avg     0.2993    0.4286    0.3524       343
+
+EVAL:   micro_F1. 0.3525 |  macro_F1 0.3523 | BEST F1: 0.3791 143
+
+Epoch:  151 2023-02-07 17:24:07.575933
+[[70221     0    22]
+ [    0 21237     0]
+ [    3     0 21994]]
+0.9997513360861575
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9961    0.9976    0.9969      1271
+
+   micro avg     0.9980    0.9988    0.9984      2508
+   macro avg     0.9980    0.9988    0.9984      2508
+weighted avg     0.9980    0.9988    0.9984      2508
+
+TRAIN:  micro_F1. 0.9984 |  macro_F1 0.9984
+[[8851  713  838]
+ [ 678 1890  400]
+ [ 725  460 1842]]
+0.6956648723465997
+              precision    recall  f1-score   support
+
+           c     0.2863    0.3846    0.3283       169
+           p     0.3289    0.4253    0.3709       174
+
+   micro avg     0.3075    0.4052    0.3497       343
+   macro avg     0.3076    0.4050    0.3496       343
+weighted avg     0.3079    0.4052    0.3499       343
+
+EVAL:   micro_F1. 0.3497 |  macro_F1 0.3496 | BEST F1: 0.3791 143
+
+Epoch:  152 2023-02-07 17:26:50.983416
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8828  733  841]
+ [ 648 1920  400]
+ [ 717  457 1853]]
+0.6981796189207016
+              precision    recall  f1-score   support
+
+           c     0.3077    0.4024    0.3487       169
+           p     0.3348    0.4253    0.3747       174
+
+   micro avg     0.3213    0.4140    0.3618       343
+   macro avg     0.3213    0.4138    0.3617       343
+weighted avg     0.3215    0.4140    0.3619       343
+
+EVAL:   micro_F1. 0.3618 |  macro_F1 0.3617 | BEST F1: 0.3791 143
+
+Epoch:  153 2023-02-07 17:29:35.246347
+[[70223     0    20]
+ [    0 21237     0]
+ [    5     0 21992]]
+0.9997513205664749
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9961    0.9976    0.9969      1271
+
+   micro avg     0.9980    0.9988    0.9984      2508
+   macro avg     0.9980    0.9988    0.9984      2508
+weighted avg     0.9980    0.9988    0.9984      2508
+
+TRAIN:  micro_F1. 0.9984 |  macro_F1 0.9984
+[[8599  858  945]
+ [ 608 1973  387]
+ [ 638  511 1878]]
+0.6923263227264282
+              precision    recall  f1-score   support
+
+           c     0.2789    0.4142    0.3333       169
+           p     0.3394    0.4310    0.3797       174
+
+   micro avg     0.3072    0.4227    0.3558       343
+   macro avg     0.3091    0.4226    0.3565       343
+weighted avg     0.3096    0.4227    0.3569       343
+
+EVAL:   micro_F1. 0.3558 |  macro_F1 0.3565 | BEST F1: 0.3791 143
+
+Epoch:  154 2023-02-07 17:32:19.407141
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8186 1001 1215]
+ [ 474 2084  410]
+ [ 560  552 1915]]
+0.6828752680678294
+              precision    recall  f1-score   support
+
+           c     0.3020    0.4556    0.3632       169
+           p     0.2960    0.4253    0.3491       174
+
+   micro avg     0.2990    0.4402    0.3561       343
+   macro avg     0.2990    0.4405    0.3561       343
+weighted avg     0.2989    0.4402    0.3560       343
+
+EVAL:   micro_F1. 0.3561 |  macro_F1 0.3561 | BEST F1: 0.3791 143
+
+Epoch:  155 2023-02-07 17:35:01.308200
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8604  888  910]
+ [ 568 2049  351]
+ [ 640  556 1831]]
+0.6946740423039355
+              precision    recall  f1-score   support
+
+           c     0.2835    0.4260    0.3404       169
+           p     0.3443    0.4195    0.3782       174
+
+   micro avg     0.3112    0.4227    0.3585       343
+   macro avg     0.3139    0.4228    0.3593       343
+weighted avg     0.3143    0.4227    0.3596       343
+
+EVAL:   micro_F1. 0.3585 |  macro_F1 0.3593 | BEST F1: 0.3791 143
+
+Epoch:  156 2023-02-07 17:37:44.490210
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8521  870 1011]
+ [ 566 1988  414]
+ [ 627  486 1914]]
+0.6928057031151672
+              precision    recall  f1-score   support
+
+           c     0.2927    0.4260    0.3470       169
+           p     0.3391    0.4483    0.3861       174
+
+   micro avg     0.3151    0.4373    0.3663       343
+   macro avg     0.3159    0.4372    0.3666       343
+weighted avg     0.3162    0.4373    0.3668       343
+
+EVAL:   micro_F1. 0.3663 |  macro_F1 0.3666 | BEST F1: 0.3791 143
+
+Epoch:  157 2023-02-07 17:40:29.430905
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8458  937 1007]
+ [ 543 2035  390]
+ [ 613  496 1918]]
+0.6941202578309733
+              precision    recall  f1-score   support
+
+           c     0.2988    0.4260    0.3512       169
+           p     0.3393    0.4368    0.3819       174
+
+   micro avg     0.3183    0.4315    0.3663       343
+   macro avg     0.3190    0.4314    0.3666       343
+weighted avg     0.3193    0.4315    0.3668       343
+
+EVAL:   micro_F1. 0.3663 |  macro_F1 0.3666 | BEST F1: 0.3791 143
+
+Epoch:  158 2023-02-07 17:43:13.992971
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8442  912 1048]
+ [ 562 1979  427]
+ [ 634  469 1924]]
+0.688935452732741
+              precision    recall  f1-score   support
+
+           c     0.2939    0.4260    0.3478       169
+           p     0.3263    0.4425    0.3756       174
+
+   micro avg     0.3098    0.4344    0.3617       343
+   macro avg     0.3101    0.4343    0.3617       343
+weighted avg     0.3103    0.4344    0.3619       343
+
+EVAL:   micro_F1. 0.3617 |  macro_F1 0.3617 | BEST F1: 0.3791 143
+
+Epoch:  159 2023-02-07 17:45:58.177697
+[[70221     0    22]
+ [    0 21237     0]
+ [    3     0 21994]]
+0.9997513360861575
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8767  773  862]
+ [ 632 1940  396]
+ [ 681  456 1890]]
+0.7001484079674912
+              precision    recall  f1-score   support
+
+           c     0.2931    0.4024    0.3392       169
+           p     0.3409    0.4310    0.3807       174
+
+   micro avg     0.3164    0.4169    0.3597       343
+   macro avg     0.3170    0.4167    0.3599       343
+weighted avg     0.3174    0.4169    0.3602       343
+
+EVAL:   micro_F1. 0.3597 |  macro_F1 0.3599 | BEST F1: 0.3791 143
+
+Epoch:  160 2023-02-07 17:48:41.386176
+[[70221     0    22]
+ [    0 21237     0]
+ [    3     0 21994]]
+0.9997513360861575
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8649  751 1002]
+ [ 572 1861  535]
+ [ 651  402 1974]]
+0.6930884440095569
+              precision    recall  f1-score   support
+
+           c     0.3131    0.3964    0.3499       169
+           p     0.3200    0.4598    0.3774       174
+
+   micro avg     0.3168    0.4286    0.3643       343
+   macro avg     0.3165    0.4281    0.3636       343
+weighted avg     0.3166    0.4286    0.3638       343
+
+EVAL:   micro_F1. 0.3643 |  macro_F1 0.3636 | BEST F1: 0.3791 143
+
+Epoch:  161 2023-02-07 17:51:24.939991
+[[70221     0    22]
+ [    0 21237     0]
+ [    3     0 21994]]
+0.9997513360861575
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8652  812  938]
+ [ 584 1944  440]
+ [ 652  430 1945]]
+0.6990721796403139
+              precision    recall  f1-score   support
+
+           c     0.2969    0.4024    0.3417       169
+           p     0.3406    0.4483    0.3871       174
+
+   micro avg     0.3188    0.4257    0.3645       343
+   macro avg     0.3188    0.4253    0.3644       343
+weighted avg     0.3191    0.4257    0.3647       343
+
+EVAL:   micro_F1. 0.3645 |  macro_F1 0.3644 | BEST F1: 0.3791 143
+
+Epoch:  162 2023-02-07 17:54:08.976340
+[[70219     0    24]
+ [    0 21237     0]
+ [    1     0 21996]]
+0.9997513516026162
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9953    0.9984    0.9969      1271
+
+   micro avg     0.9976    0.9992    0.9984      2508
+   macro avg     0.9976    0.9992    0.9984      2508
+weighted avg     0.9976    0.9992    0.9984      2508
+
+TRAIN:  micro_F1. 0.9984 |  macro_F1 0.9984
+[[8749  710  943]
+ [ 633 1835  500]
+ [ 656  403 1968]]
+0.6959293719317617
+              precision    recall  f1-score   support
+
+           c     0.3000    0.3905    0.3393       169
+           p     0.3197    0.4483    0.3732       174
+
+   micro avg     0.3103    0.4198    0.3569       343
+   macro avg     0.3098    0.4194    0.3563       343
+weighted avg     0.3100    0.4198    0.3565       343
+
+EVAL:   micro_F1. 0.3569 |  macro_F1 0.3563 | BEST F1: 0.3791 143
+
+Epoch:  163 2023-02-07 17:56:53.339842
+3791[[70219     0    24]
+ [    0 21237     0]
+ [    1     0 21996]]
+0.9997513516026162
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9937    0.9984    0.9961      1271
+
+   micro avg     0.9968    0.9992    0.9980      2508
+   macro avg     0.9969    0.9992    0.9980      2508
+weighted avg     0.9968    0.9992    0.9980      2508
+
+TRAIN:  micro_F1. 0.9980 |  macro_F1 0.9980
+[[8382  966 1054]
+ [ 490 2081  397]
+ [ 616  461 1950]]
+0.6974122867472167
+              precision    recall  f1-score   support
+
+           c     0.3004    0.4320    0.3544       169
+           p     0.3391    0.4540    0.3882       174
+
+   micro avg     0.3193    0.4431    0.3712       343
+   macro avg     0.3197    0.4430    0.3713       343
+weighted avg     0.3200    0.4431    0.3715       343
+
+EVAL:   micro_F1. 0.3712 |  macro_F1 0.3713 | BEST F1: 0.3791 143
+
+Epoch:  164 2023-02-07 17:59:38.256706
+[[70219     0    24]
+ [    0 21237     0]
+ [    1     0 21996]]
+0.9997513516026162
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9953    0.9984    0.9969      1271
+
+   micro avg     0.9976    0.9992    0.9984      2508
+   macro avg     0.9976    0.9992    0.9984      2508
+weighted avg     0.9976    0.9992    0.9984      2508
+
+TRAIN:  micro_F1. 0.9984 |  macro_F1 0.9984
+[[8621  859  922]
+ [ 559 2026  383]
+ [ 651  453 1923]]
+0.7032009794043065
+              precision    recall  f1-score   support
+
+           c     0.3133    0.4320    0.3632       169
+           p     0.3562    0.4483    0.3969       174
+
+   micro avg     0.3341    0.4402    0.3799       343
+   macro avg     0.3347    0.4401    0.3801       343
+weighted avg     0.3350    0.4402    0.3803       343
+
+EVAL:   micro_F1. 0.3799 |  macro_F1 0.3801 | BEST F1: 0.3791 143
+[[16496  1843  1886]
+ [ 1556  3667   836]
+ [ 1327   934  4101]]
+0.680565640879439
+              precision    recall  f1-score   support
+
+           c     0.2954    0.3814    0.3329       354
+           p     0.3134    0.4188    0.3585       351
+
+   micro avg     0.3045    0.4000    0.3458       705
+   macro avg     0.3044    0.4001    0.3457       705
+weighted avg     0.3044    0.4000    0.3457       705
+
+TEST:   micro_F1. 0.3458 |  macro_F1 0.3457
+
+Epoch:  165 2023-02-07 18:02:41.163123
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8413  880 1109]
+ [ 553 1934  481]
+ [ 614  420 1993]]
+0.6895844515385647
+              precision    recall  f1-score   support
+
+           c     0.3229    0.4260    0.3673       169
+           p     0.3173    0.4540    0.3735       174
+
+   micro avg     0.3199    0.4402    0.3706       343
+   macro avg     0.3201    0.4400    0.3704       343
+weighted avg     0.3200    0.4402    0.3705       343
+
+EVAL:   micro_F1. 0.3706 |  macro_F1 0.3704 | BEST F1: 0.3799 164
+
+Epoch:  166 2023-02-07 18:05:26.160213
+[[70220     0    23]
+ [    0 21237     0]
+ [    2     0 21995]]
+0.9997513438447897
+              precision    recall  f1-score   support
+
+           c     1.0000    1.0000    1.0000      1237
+           p     0.9969    0.9984    0.9976      1271
+
+   micro avg     0.9984    0.9992    0.9988      2508
+   macro avg     0.9984    0.9992    0.9988      2508
+weighted avg     0.9984    0.9992    0.9988      2508
+
+TRAIN:  micro_F1. 0.9988 |  macro_F1 0.9988
+[[8700  729  973]
+ [ 623 1840  505]
+ [ 669  384 1974]]
+0.6946873487643601
+              precision    recall  f1-score   support
+
+           c     0.3190    0.3964    0.3536       169
+           p     0.3320    0.4598    0.3855       174
+
+   micro avg     0.3259    0.4286    0.3703       343
+   macro avg     0.3255    0.4281    0.3696       343
+weighted avg     0.3256    0.4286    0.3698       343
+
+EVAL:   micro_F1. 0.3703 |  macro_F1 0.3696 | BEST F1: 0.3799 164
+
+Epoch:  167 2023-02-07 18:08:11.204601
