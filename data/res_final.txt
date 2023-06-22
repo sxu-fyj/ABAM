@@ -1,0 +1,226 @@
+输出部分标签融合
+
+ssh://fuyj@115.24.15.21:22/home/fuyj/workspace/venv/torch/bin/python3 -u /home/fuyj/.pycharm_helpers/pydev/pydevd.py --multiproc --qt-support=auto --client 0.0.0.0 --port 42125 --file /home/fuyj/workspace/experiment/ABAM-main/src/run_AURC_token.py
+pydev debugger: process 10643 is connecting
+
+Connected to pydev debugger (build 193.7288.30)
+device cuda:0
+../models/aurc_in_token.pt
+../models/aurc_in_config.json
+../models/aurc_in_predictions_dev.json
+../models/aurc_in_predictions_test.json
+../data/../data/data_dict_bert.json
+数据集大小
+4396
+8 ['abortion', 'cloning', 'death penalty', 'gun control', 'marijuana legalization', 'minimum wage', 'nuclear energy', 'school uniforms']
+{'abortion': 415, 'death penalty': 588, 'gun control': 480, 'marijuana legalization': 626, 'minimum wage': 624, 'nuclear energy': 615, 'school uniforms': 705, 'cloning': 343}
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+/home/fuyj/workspace/venv/torch/lib/python3.6/site-packages/transformers/tokenization_utils_base.py:2218: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  FutureWarning,
+2268 71
+307 307
+636 636
+Some weights of the model checkpoint at ../model_base/ were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+700
+##### DOMAIN: inner , use CRF: True , learning-rate: 1e-05 , DROPOUT: 0.1
+
+Epoch:    0 2022-06-20 21:41:35.468125
+/home/fuyj/workspace/venv/torch/lib/python3.6/site-packages/torchcrf/__init__.py:249: UserWarning: where received a uint8 condition tensor. This behavior is deprecated and will be removed in a future version of PyTorch. Use a boolean condition instead. (Triggered internally at  ../aten/src/ATen/native/TensorCompare.cpp:328.)
+  score = torch.where(mask[i].unsqueeze(1), next_score, score)
+[[11612  2745   429  3121   889]
+ [ 1534  8876   378  5005   575]
+ [  162  1071  1571   396  1548]
+ [ 1274  4304   240  9862   795]
+ [  124   544  1031   795  2829]]
+TRAIN:  Pre. 0.533 | Rec. 0.524 | F1 0.523
+[[1376  361   59  438  115]
+ [ 246 1234   64  693   72]
+ [  22  143  200   50  218]
+ [ 172  493   32 1461  135]
+ [  16   79  104  116  376]]
+EVAL:   Pre. 0.532 | Rec. 0.523 | F1 0.521 | BEST F1: 0.000 None
+[[3190  828  138  802  233]
+ [ 537 2586  108 1344  156]
+ [  57  349  398  124  392]
+ [ 484 1165   77 2750  260]
+ [  48  150  302  255  802]]
+TEST:   Pre. 0.519 | Rec. 0.512 | F1 0.512
+
+Epoch:    1 2022-06-20 21:42:38.083847
+[[13103  2036   302  2720   635]
+ [ 1264 10030   508  4191   375]
+ [  162   735  2036   297  1518]
+ [ 1128  3156   174 11323   694]
+ [  139   212   633   788  3551]]
+TRAIN:  Pre. 0.624 | Rec. 0.619 | F1 0.616
+[[1541  311   55  357   85]
+ [ 260 1365   72  555   57]
+ [  41   79  256   48  209]
+ [ 157  354    8 1634  140]
+ [  26   29   70  112  454]]
+EVAL:   Pre. 0.608 | Rec. 0.604 | F1 0.599 | BEST F1: 0.521 0
+[[3434  644   99  809  205]
+ [ 569 2767  141 1145  109]
+ [  87  247  496   83  407]
+ [ 493  916   55 3058  214]
+ [  71   62  220  258  946]]
+TEST:   Pre. 0.580 | Rec. 0.575 | F1 0.574
+
+Epoch:    2 2022-06-20 21:43:40.148580
+[[14265  1897   361  1886   387]
+ [ 1229 12040   712  2224   163]
+ [  162   773  2986   140   687]
+ [ 1226  2976   204 11433   636]
+ [  149   196   767   721  3490]]
+TRAIN:  Pre. 0.690 | Rec. 0.695 | F1 0.692
+[[1637  301   71  279   61]
+ [ 300 1534   95  351   29]
+ [  46   93  349   19  126]
+ [ 173  411   19 1562  128]
+ [  31   31   94  104  431]]
+EVAL:   Pre. 0.636 | Rec. 0.644 | F1 0.639 | BEST F1: 0.599 1
+[[3598  694  123  625  151]
+ [ 584 3138  184  765   60]
+ [ 100  243  731   43  203]
+ [ 546 1077   78 2869  166]
+ [  89   74  311  209  874]]
+TEST:   Pre. 0.616 | Rec. 0.615 | F1 0.615
+
+Epoch:    3 2022-06-20 21:44:48.760943
+[[14054  1669   279  2345   449]
+ [  708 12310   656  2520   174]
+ [   91   719  3071   144   723]
+ [  663  1759   102 13201   750]
+ [   74   109   457   748  3935]]
+TRAIN:  Pre. 0.733 | Rec. 0.737 | F1 0.733
+[[1543  304   63  370   69]
+ [ 233 1462   84  495   35]
+ [  39   87  341   25  141]
+ [ 113  327   13 1703  137]
+ [  24   19   71  114  463]]
+EVAL:   Pre. 0.646 | Rec. 0.648 | F1 0.643 | BEST F1: 0.639 2
+[[3429  619  111  860  172]
+ [ 444 2939  175 1108   65]
+ [  84  232  702   54  248]
+ [ 417  838   56 3229  196]
+ [  75   63  247  196  976]]
+TEST:   Pre. 0.625 | Rec. 0.624 | F1 0.623
+
+Epoch:    4 2022-06-20 21:45:54.942876
+[[14675  1845   324  1628   324]
+ [  595 13957   811   943    62]
+ [   69   737  3594    51   297]
+ [  792  2202   145 12615   721]
+ [   88   127   682   633  3793]]
+TRAIN:  Pre. 0.763 | Rec. 0.774 | F1 0.766
+[[1580  373   73  263   60]
+ [ 247 1671  108  264   19]
+ [  37   92  406   12   86]
+ [ 125  452   25 1563  128]
+ [  28   24  122   94  423]]
+EVAL:   Pre. 0.656 | Rec. 0.666 | F1 0.659 | BEST F1: 0.643 3
+[[3514  779  141  615  142]
+ [ 471 3354  205  657   44]
+ [  87  224  820   33  156]
+ [ 487 1215   82 2779  173]
+ [  87   81  372  154  863]]
+TEST:   Pre. 0.628 | Rec. 0.630 | F1 0.625
+
+Epoch:    5 2022-06-20 21:46:57.642428
+[[14760  1648   269  1805   314]
+ [  546 14212   750   810    50]
+ [   57   798  3580    36   277]
+ [  578  1600    93 13473   731]
+ [   63    92   475   682  4011]]
+TRAIN:  Pre. 0.787 | Rec. 0.796 | F1 0.790
+[[1565  352   64  304   64]
+ [ 247 1647  101  294   20]
+ [  37  100  386   15   95]
+ [ 127  434   19 1585  128]
+ [  28   23  111   97  432]]
+EVAL:   Pre. 0.653 | Rec. 0.661 | F1 0.656 | BEST F1: 0.659 4
+
+Epoch:    6 2022-06-20 21:47:40.551158
+[[14583  1583   266  2015   349]
+ [  393 14259   848   809    59]
+ [   38   648  3741    27   294]
+ [  412   922    64 14229   848]
+ [   46    47   286   622  4322]]
+TRAIN:  Pre. 0.804 | Rec. 0.822 | F1 0.810
+[[1507  349   71  352   70]
+ [ 209 1562  106  405   27]
+ [  33   78  393   16  113]
+ [ 109  396   20 1628  140]
+ [  26   15  103   87  460]]
+EVAL:   Pre. 0.648 | Rec. 0.663 | F1 0.652 | BEST F1: 0.659 4
+
+Epoch:    7 2022-06-20 21:48:22.310585
+[[15047  1551   239  1670   289]
+ [  442 14605   824   465    32]
+ [   40   709  3812    14   173]
+ [  508   940    55 14193   779]
+ [   59    46   294   669  4255]]
+TRAIN:  Pre. 0.817 | Rec. 0.831 | F1 0.823
+[[1556  350   64  315   64]
+ [ 252 1628  105  306   18]
+ [  44   86  395   16   92]
+ [ 128  447   21 1568  129]
+ [  28   23  116   92  432]]
+EVAL:   Pre. 0.650 | Rec. 0.660 | F1 0.654 | BEST F1: 0.659 4
+
+Epoch:    8 2022-06-20 21:49:05.578592
+[[14962  1623   253  1666   292]
+ [  339 14832   855   321    21]
+ [   38   692  3867     9   142]
+ [  462   944    56 14194   819]
+ [   48    45   289   620  4321]]
+TRAIN:  Pre. 0.821 | Rec. 0.838 | F1 0.827
+[[1529  383   69  302   66]
+ [ 236 1657  108  289   19]
+ [  40   88  402   16   87]
+ [ 116  500   26 1519  132]
+ [  23   27  124   82  435]]
+EVAL:   Pre. 0.648 | Rec. 0.659 | F1 0.651 | BEST F1: 0.659 4
+
+Epoch:    9 2022-06-20 21:49:48.933252
+[[15115  1528   233  1634   286]
+ [  395 14769   848   333    23]
+ [   39   686  3867    12   144]
+ [  471   782    49 14355   818]
+ [   51    39   250   633  4350]]
+TRAIN:  Pre. 0.825 | Rec. 0.842 | F1 0.832
+[[1552  349   66  316   66]
+ [ 247 1619  108  315   20]
+ [  42   84  397   18   92]
+ [ 125  468   23 1543  134]
+ [  27   22  124   83  435]]
+EVAL:   Pre. 0.646 | Rec. 0.658 | F1 0.650 | BEST F1: 0.659 4
+
+Some weights of the model checkpoint at ../model_base/ were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+
+Inference:
+
+[[14675  1845   324  1628   324]
+ [  595 13957   811   943    62]
+ [   69   737  3594    51   297]
+ [  792  2202   145 12615   721]
+ [   88   127   682   633  3793]]
+TRAIN:  Pre. 0.763 | Rec. 0.774 | F1 0.766
+[[1580  373   73  263   60]
+ [ 247 1671  108  264   19]
+ [  37   92  406   12   86]
+ [ 125  452   25 1563  128]
+ [  28   24  122   94  423]]
+EVAL:   Pre. 0.656 | Rec. 0.666 | F1 0.659
+[[3514  779  141  615  142]
+ [ 471 3354  205  657   44]
+ [  87  224  820   33  156]
+ [ 487 1215   82 2779  173]
+ [  87   81  372  154  863]]
+TEST:   Pre. 0.628 | Rec. 0.630 | F1 0.625
+
+Process finished with exit code 0
